@@ -10,6 +10,7 @@ sitemap: false
 **자주 방문하는 페이지**
 
 + [arm9loaderhax 설치](installing-arm9loaderhax)
++ [단일 페이지로 설치](single-page-installation)
 + [홈브류 런처 (사운드핵스)](homebrew-launcher-(soundhax))
 + [Decrypt9 (홈브류 런처)](decrypt9-(homebrew-launcher))
 {% endcapture %}
@@ -37,6 +38,7 @@ sitemap: false
 + [홈브류 런처 (사운드핵스)](homebrew-launcher-(soundhax))
 + [홈브류 런처 (기타)](homebrew-launcher-(alternatives))
 + [arm9loaderhax 설치](installing-arm9loaderhax)
++ [단일 페이지로 설치](single-page-installation)
 + [EmuNAND에서 데이터 이사](move-emunand)
 + [NTR 및 큐빅 닌자](ntr-and-cubic-ninja)
 + [지역 변경](region-changing)

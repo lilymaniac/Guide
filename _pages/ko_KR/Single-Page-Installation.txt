@@ -1,0 +1,302 @@
+---
+title: "단일 페이지로 설치" #
+lang: ko
+permalink: /single-page-installation.html
+---
+
+이 페이지는 한국어 번역자가 [홈브류 런처 (사운드핵스)](homebrew-launcher-(soundhax)) - [Decrypt9 (홈브류 런처)](decrypt9-(homebrew-launcher)) - [2.1.0 ctrtransfer](2.1.0-ctrtransfer) - [arm9loaderhax 설치](installing-arm9loaderhax) 페이지의 내용을 한 페이지로 합친 것입니다. 따라서 다른 언어로 작성된 페이지가 존재하지 않으며, 이 페이지의 모든 과정을 오류 없이 진행하면 arm9loaderhax 설치가 완료됩니다. 한국어 번역자를 신뢰할 수 없을 경우 [시작하기](get-started) 페이지로 돌아가 다른 지시 사항을 따르십시오.
+{: .notice--danger}
+
+#### 준비물
+
+* 최신 버전의 [prekit](https://github.com/lilymaniac/prekit/releases/latest)
+* 최신 버전의 [사운드핵스](http://soundhax.com/) *(기기 및 지역에 맞게)*
+* [otherapp 페이로드](https://smealum.github.io/3ds/#otherapp) *(기기 및 지역에 맞게)*
+* 기기의 종류와 지역에 맞는 2.1.0 ctrtransfer 이미지     
+*(맞는 지역이 없다면 아무 파일이나 선택하십시오)*:
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [뉴 3DS 또는 구 3DS 또는 2DS 2.1.0 - EUR - ctrtransfer](magnet:?xt=urn:btih:89acc9c1b488b8b38251de0ddf07975d6bd354a1&dn=2.1.0-4E%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [뉴 3DS 또는 구 3DS 또는 2DS 2.1.0 - JPN - ctrtransfer](magnet:?xt=urn:btih:3dbb9c9c85a33c6242f424dcbaebcacdd8a5912b&dn=2.1.0-4J%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)     
+  +    <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [뉴 3DS 또는 구 3DS 또는 2DS 2.1.0 - USA - ctrtransfer](magnet:?xt=urn:btih:1609ce9ee7b0ed9b6dea0b3e7cca4fc52dad6ff4&dn=2.1.0-4U%5Fctrtransfer%5Fo3ds.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+
+#### 지시 사항
+
+##### 섹션 I - 준비 작업
+
+**NAND 백업 파일을 만들기 위해 일단은 최소 4GB 이상의 SD 카드로 진행하십시오. arm9loaderhax 설치가 끝나면 더 작은 용량의 SD 카드를 사용할 수 있습니다.**
+{: .notice--warning}
+
+2DS / 구 3DS 사용자는 SD 카드 리더기를, 뉴 3DS 사용자는 microSD 카드 리더기를 준비하십시오.
+{: .notice--warning}
+
+1. SD 카드의 최상위 경로에 `3ds` 폴더가 있으면 폴더를 삭제하십시오.
+2. SD 카드의 최상위 경로에 `a9lh` 폴더가 있으면 폴더를 삭제하십시오.
+3. prekit `.zip` 파일의 _내용물을_  SD 카드의 최상위 경로에 복사하십시오. 동일한 파일이 있으면 덮어씌우십시오.
+4. data_input `.zip` 파일에서 `a9lh` 폴더를 SD 카드의 최상위 경로에 복사하십시오. 동일한 파일이 있으면 덮어씌우십시오.
+5. ctrtransfer `.zip` 파일에서 2.1.0 `.bin` 파일과 `.bin.sha` 파일을 SD 카드의 `/files9/` 폴더에 복사하십시오.
+6. otherapp 페이로드 파일을 SD 카드의 최상위 경로에 복사하고 파일의 이름을 `otherapp.bin`으로 바꾸십시오.
+7. 사운드핵스 `.m4a` 파일을 SD 카드의 최상위 경로에 복사하십시오.
+8. `fbi-2.4.2-injectable.zip` 파일의 _내용물을_  SD 카드의 `/files9/` 폴더에 복사하십시오.
+9. SD 카드를 기기에 삽입하십시오.
+
+{% capture notice-7 %}
+**SD 카드의 최상위 경로에 다음과 같은 폴더와 파일들이 있어야 합니다:**
+
+    + 3ds
+    + a9lh
+    + cias
+    + files9
+    + luma
+    + arm9.bin
+    + arm9loaderhax.bin
+    + arm11.bin
+    + boot.3dsx
+    + otherapp.bin
+    + SafeA9LHInstaller.dat
+    + soundhax-n3ds.m4a 또는 soundhax-o3ds.m4a
+    + safehaxpayload.bin
+
+{% endcapture %}
+
+<div class="notice--info">{{ notice-7 | markdownify }}</div>
+
+##### 섹션 II - 홈브류 런처 (사운드핵스)
+
+1. 닌텐도 3DS 사운드를 실행하십시오.
+2. 새가 나오는 도움말을 모두 살펴본 뒤 정상적으로 앱을 닫고 다시 여십시오.
+  + 사운드핵스를 바로 실행하면 닌텐도 3DS 사운드를 실행할 때마다 도움말이 나타납니다.
+3. `/SD 카드`를 선택하고 "<3 nedwill 2016" 파일을 재생하십시오.
+  + 여러 번 시도해야 할 수 있습니다.
+  + 화면이 멈춘다면 전원 버튼을 길게 눌러 기기를 강제로 끈 다음 다시 시도하십시오.
+4. 성공하면 기기에 홈브류 런처가 켜질 것입니다.
+
+##### 섹션 III - Decrypt9 (홈브류 런처)
+
+1. 홈브류 목록에서 fasthax를 실행하십시오.
+  + 이 옵션은 밑으로 내려야 보일 수도 있습니다.
+2. fasthax 실행에 성공하면 (Start) 버튼을 눌러 홈브류 런처로 나오십시오.
+  + 여러 번 시도해야 할 수 있습니다.
+  + 화면이 멈춘 경우 전원 버튼을 눌러 기기를 끈 뒤 다시 시도하십시오.
+3. 홈브류 목록에서 safehax를 실행하십시오.
+  + 이 옵션은 밑으로 내려야 보일 수도 있습니다.
+  + 화면이 멈춘 경우 전원 버튼을 눌러 기기를 끈 뒤 다시 시도하십시오.
+4. 익스플로잇이 성공적으로 실행되면 Decrypt9이 켜질 것입니다.
+
+##### 섹션 IV - 2.1.0 ctrtransfer
+
+**지금으로서는 2.1.0 ctrtransfer 이후의 과정을 진행하기 위해서 기기의 무선 인터넷 연결이 반드시 필요합니다. 2DS 또는 뉴 3DS에서 무선 인터넷 연결을 끈 채 2.1.0 버전으로 다운그레이드했다면, 충전기와 배터리를 제거하고 몇 초 후 다시 장착하여 무선 인터넷 연결을 다시 켤 수 있습니다.**
+{: .notice--warning}
+
+**2.1.0 ctrtransfer를 진행하기 전에 청소년 보호 기능을 비활성화하십시오. 비밀번호를 모를 경우 [이 사이트](https://mkey.salthax.org/)를 참고하십시오. 13세 미만 어린이의 NNID가 연결되어 있어 청소년 보호 기능을 비활성화할 수 없는 경우 청소년 보호 기능의 모든 옵션을 "제한하지 않음"으로 설정하십시오.**
+{: .notice--warning}
+
+**ctrtransfer 과정을 거치면 유저가 설치한 모든 티켓들이 복원하기 전까지 기기에서 제거됩니다. 절대로 백업 생성을 건너뛰지 마십시오!**
+{: .notice--danger}
+
+**6.0.0 버전 이하의 2DS를 포맷하지 마십시오. 초기 설정이 불가능하고 벽돌이 됩니다!**
+{: .notice--danger}
+
+**2.1.0 버전(구 3DS 펌웨어)의 뉴 3DS는 절대로 업데이트하지 마십시오! 100% 벽돌이 됩니다! 먼저 NAND 백업 파일을 복원하거나 ctrtransfer 과정을 통해 뉴 3DS 펌웨어로 돌아간 후에 업데이트하십시오!**
+{: .notice--danger}
+
+{% capture notice %}
+**2.1.0 버전의 뉴 3DS를 슬립 모드로 전환하면 복구가 불가능한 벽돌이 됩니다!  
+이는 기기가 켜져 있을 때 위쪽 화면을 덮으면 나타나는 증상이며, 기기를 끄는 것으로는 벽돌이 되지 않습니다.  
+또한 화면이 켜져 있는 시간에 따라 슬립 모드로 전환되는 것이 아니며, 위쪽 화면을 덮어야 슬립 모드로 전환됩니다.  
+2.1.0 버전으로 다운그레이드한 이후에는 벽돌이 될 가능성을 없애기 위해 작업을 지체 없이 진행하십시오!**
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+**반드시 _당신이 사용 중인_  기기의 NAND 백업 파일이 있어야 합니다. 백업 파일이 없다면 이 섹션을 진행하는 중에 백업 파일을 만들라는 메시지가 나타납니다. NAND 백업 파일이 있는지 잘 모르겠다면 메시지가 나타났을 때 (A) 버튼을 눌러 일단 백업 파일을 만들어 두십시오.**
+{: .notice--danger}
+
+**백업 파일을 만들 저장 공간이 부족하다면 Decrypt9WIP 메인 메뉴에서 (Select) 버튼을 눌러 SD 카드를 빼낸 뒤 다른 SD 카드로 교체하여 백업 파일을 만드십시오. 또는 현재 사용하고 있는 SD 카드의 저장 공간을 비운 후에 백업 파일을 만들어도 됩니다.**
+{: .notice--danger}
+
+1. Decrypt9 메인 메뉴에서 "SysNAND Options", "CTRNAND Transfer", "Auto CTRNAND Transfer" 옵션을 차례로 선택하십시오.
+2. 주어진 키 조합을 입력한 뒤 메시지가 나타나면 (A) 버튼을 눌러 2.1.0 ctrtransfer 이미지를 선택하십시오.
+3. NAND 백업 파일이 없을 경우 **메시지가 나타나면 (A) 버튼을 눌러 SysNAND를 `NANDmin.bin` 파일로 백업하십시오.**
+  + **반드시 _당신이 사용 중인_  기기의 NAND 백업 파일이 있어야 합니다.**
+  + **백업을 건너뛰면 설치된 게임과 세이브를 모두 잃게 됩니다!**
+4. ctrtransfer 과정은 시간이 걸릴 수 있으므로 끝날 때까지 기다리십시오.
+5. ctrtransfer 과정이 완료되면 (B) 버튼을 눌러 돌아가십시오.
+6. (Select) 버튼을 눌러 SD 카드를 빼내십시오.
+7. SD 카드가 제거된 상태에서 (Start) 버튼을 눌러 기기를 다시 시작하십시오.
+  + 2.1.0 버전에서는 홈 메뉴가 로드되기 전에 SD 카드가 삽입되어 있으면 부팅 시 검은 화면이 보입니다.
+  + 2.1.0 버전에서는 기기가 다시 시작될 때마다 부팅 전에 SD 카드를 빼낸 뒤 홈 메뉴의 로딩이 완료되었을 때 다시 삽입해야 합니다.
+  + 이 증상은 다음 섹션에서 기기를 복원하면 고쳐집니다.
+8. 홈 메뉴의 로딩이 완료되면 SD 카드를 다시 3DS에 삽입하십시오.
+
+일부 기기에서는 2.1.0 버전의 초기 부팅이 일반적인 부팅보다 약간 오래 걸릴 수 있습니다.
+{: .notice--info}
+
+*(화면 깨짐이나 변색은 2.1.0 버전의 일부 기기에서 정상적인 증상이며, 백업 파일을 복원하면 증상이 사라집니다.)*
+{: .notice--info}
+
+{% capture notice %}
+**2.1.0 버전의 뉴 3DS를 슬립 모드로 전환하면 복구가 불가능한 벽돌이 됩니다!  
+이는 기기가 켜져 있을 때 위쪽 화면을 덮으면 나타나는 증상이며, 기기를 끄는 것으로는 벽돌이 되지 않습니다.  
+또한 화면이 켜져 있는 시간에 따라 슬립 모드로 전환되는 것이 아니며, 위쪽 화면을 덮어야 슬립 모드로 전환됩니다.  
+벽돌이 될 가능성을 없애기 위해 작업을 지체 없이 진행하십시오!**
+{% endcapture %}
+
+<div class="notice--danger">{{ notice | markdownify }}</div>
+
+##### 섹션 V - arm9loaderhax 설치
+
+**다른 기기의 OTP를 사용하지 마십시오. 100% 벽돌이 됩니다.**
+{: .notice--danger}
+
+1. 3DS에서 `http://2xrsa.3ds.guide` 주소에 접속하십시오.
+  + "This service is not available in your region" 오류가 나타난다면 본체 설정에서 기기의 국적을 2.1.0 ctrtransfer에서 설치한 NAND의 지역에 맞게 바꾸십시오.
+  + 다른 오류가 나타난다면 [이 문제 해결 가이드](troubleshooting#ts_browser)를 참고하십시오.
+  + 화면이 깨진다면 [이 문제 해결 가이드](troubleshooting#ts_safe_a9lh_screen)를 참고하십시오.
+  + 2DS 또는 뉴 3DS에서 무선 인터넷 연결이 꺼져 있다면, 충전기와 배터리를 제거하고 몇 초 후 다시 장착하여 무선 인터넷 연결을 다시 켤 수 있습니다.
+2. (Select) 버튼을 눌러 Full Install을 수행하십시오.
+3. 인스톨러가 기기에 arm9loaderhax를 설치할 것입니다 (이 작업은 매우 빨리 끝납니다).
+4. 아무 버튼이나 눌러 기기의 전원을 끄십시오.
+
+##### 섹션 VI - Luma3DS 구성
+
+1. (Select) 버튼을 누른 채 기기를 켜 Luma3DS 구성 메뉴로 진입하십시오.
+  + 전원 버튼을 누르기 전에 (Select) 버튼을 먼저 눌러야 합니다.
+  + 검은 화면이 보인다면 [이 문제 해결 가이드](troubleshooting#ts_sys_a9lh)를 참고하십시오.   
+  + SafeA9LHInstaller가 켜진다면 [이 문제 해결 가이드](troubleshooting#ts_safe_a9lh)를 참고하십시오.
+2. (A) 버튼과 십자 버튼을 이용하여 다음 옵션을 켜십시오:    
+  + **"Autoboot SysNAND"**
+  + **"Use SysNAND FIRM if booting with R"**
+  + **"Show NAND or user string in System Settings"**
+3. **뉴 3DS**를 사용 중이라면 다음 옵션 *또한* 켜십시오:
+  + **"New 3DS CPU" 옵션을 "Clock+L2(x)"로**
+    + 이 옵션은 많은 게임의 프레임을 향상시키지만, 일부 게임은 불안정해질 수 있습니다.
+    + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보십시오.
+    + 이 옵션을 켜면 11.3 버전에서 홈브류 런처를 실행할 수 없습니다!
+4. (Start) 버튼을 눌러 저장하고 기기를 다시 시작하십시오.
+  + 검은 화면이 보이거나 "Failed to mount CTRNAND" 오류가 나타난다면 그냥 다음 섹션으로 넘어가십시오.  
+  
+##### 섹션 VII - 시스템 복원
+
+이 가이드를 따라하기 전에 이미 가지고 있던 EmuNAND의 데이터를 새 SysNAND 커스텀 펌웨어로 옮기고 싶은 경우, 이 섹션의 처음 네 단계 대신 [EmuNAND에서 데이터 이사](move-emunand) 페이지를 따라 진행하십시오.
+{: .notice--info}
+
+1. (Start) 버튼을 누른 채 기기를 켜 Hourglass9을 여십시오.
+2. "SysNAND Backup/Restore"를 선택하십시오.
+3. "SysNAND Restore (keep a9lh)"를 선택하십시오.
+4. 주어진 키 조합을 입력한 뒤 메시지가 나타나면 (A) 버튼을 눌러 `NANDmin.bin` 이미지를 선택하십시오.
+5. (Start) 버튼을 눌러 기기를 다시 시작하십시오.
+  + 검은 화면이 보인다면 [9.2.0 ctrtransfer](9.2.0-ctrtransfer) 페이지를 참고하십시오.
+
+##### 섹션 VIII - FBI 설치
+
+1. `섹션 II - 홈브류 런처 (사운드핵스)`를 통해 홈브류 런처를 여십시오.
+2. 홈브류 목록에서 fasthax를 실행하십시오.
+  + 이 옵션은 밑으로 내려야 보일 수도 있습니다.
+3. fasthax 실행에 성공하면 (Start) 버튼을 눌러 홈브류 런처로 나오십시오.
+  + 여러 번 시도해야 할 수 있습니다.
+  + 화면이 멈춘 경우 전원 버튼을 눌러 기기를 끈 뒤 다시 시도하십시오.
+4. 홈브류 목록에서 FBI를 실행하십시오.
+  + 이 옵션은 밑으로 내려야 보일 수도 있습니다.
+5. "SD" 디렉터리를 선택하십시오.
+6. "cias" 디렉터리를 선택하십시오.
+7. `FBI.cia` 파일로 이동하고 (A) 버튼을 눌러 설치하십시오.
+8. (Start) 버튼을 눌러 홈브류 런처로 빠져나오십시오.
+9. 홈브류 런처에서 (Start) 버튼을 눌러 홈브류 런처 종료 메뉴를 여십시오.
+10. (A) 버튼을 눌러 기기를 다시 시작하십시오.
+
+##### 섹션 IX - 설치 마무리
+
+1. 홈 메뉴에 생성된 FBI를 여십시오.
+2. "SD" 디렉터리를 선택하십시오.
+3. "cias" 디렉터리를 선택하십시오.
+4. `hblauncher_loader.cia` 파일로 이동하고 (A) 버튼을 눌러 설치하십시오.
+5. `lumaupdater.cia` 파일로 이동하고 (A) 버튼을 눌러 설치하십시오.
+6. (B) 버튼을 눌러 SD 디렉터리로 돌아가십시오.
+7. `arm9loaderhax.bin` 파일로 이동하고 (A) 버튼을 누른 뒤 "Copy" 옵션을 선택하십시오.
+8. (B) 버튼을 눌러 FBI 메인 메뉴로 돌아가십시오.
+9. "CTR NAND" 디렉터리를 선택하십시오.
+10. "\<current directory>" 디렉터리를 선택하십시오.
+11. "Paste" 옵션을 선택한 뒤 (A) 버튼을 눌러 진행하십시오.
+12. (Start) 버튼을 눌러 홈 메뉴로 빠져나오십시오.
+13. 홈 메뉴에 생성된 홈브류 런처를 여십시오.
+14. 홈브류 목록에서 DSP Dump를 실행하십시오.
+  + 이 옵션은 밑으로 내려야 보일 수도 있습니다.
+15. 종료 메시지가 나타나면 (Start) 버튼을 누르십시오.
+16. 홈브류 런처에서 (Start) 버튼을 눌러 홈브류 런처 종료 메뉴를 여십시오.
+17. (A) 버튼을 눌러 기기를 다시 시작하십시오.
+18. 기기의 전원을 끄고 SD 카드를 빼내어 컴퓨터에 삽입하십시오.
+19. SD 카드의 `/files9/` 폴더에서 2.1.0 ctrtransfer 이미지 `.bin` 파일과 `.bin.sha` 파일을 삭제하십시오.
+20. SD 카드의 `/a9lh/` 폴더에서 기기 고유의 `OTP.bin` 파일을 컴퓨터의 안전한 위치에 복사하고 여러 위치(클라우드 드라이브 등)에 백업하십시오.
+21. SD 카드가 제거된 상태에서 기기를 켜십시오.
+  + CTRNAND 기반의 Luma3DS를 구성하기 위하여 적어도 한 번은 SD 카드가 제거된 상태에서 기기를 켜십시오.
+22. (A) 버튼과 십자 버튼을 이용하여 다음 옵션을 켜십시오:    
+  + **"Show NAND or user string in System Settings"**
+23. **뉴 3DS**를 사용 중이라면 다음 옵션 *또한*  켜십시오:
+  + **"New 3DS CPU" 옵션을 "Clock+L2(x)"로**
+    + 이 옵션은 많은 게임의 프레임을 향상시키지만, 일부 게임은 불안정해질 수 있습니다.
+    + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보십시오.
+    + 이 옵션을 켜면 11.3 버전에서 홈브류 런처를 실행할 수 없습니다!
+24. SD 카드를 다시 3DS에 삽입하고 (Start) 버튼을 눌러 저장한 뒤 기기를 다시 시작하십시오.
+25. "본체 설정"의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택하여 3DS를 업데이트하십시오.
+  + A9LH + Luma3DS(지금 적용되어 있는 것) 상태에서 하는 업데이트는 안전합니다. 그만 물어보십시오.
+  + 2.1.0 버전의 뉴 3DS를 절대로 업데이트하지 말라는 경고는 NAND 백업 파일을 복원한 시점부터 해당되지 않습니다.
+  + 오류가 발생한다면 DNS 설정을 "자동"으로 설정하십시오.
+  + 계속 오류가 발생하며 NAND 백업 파일의 버전이 9.2.0 미만이라면 [9.2.0 ctrtransfer](9.2.0-ctrtransfer) 페이지를 참고하십시오.
+
+___
+
+DSi / DS 기능(DS 카트 또는 DSiWare 등)이 작동하지 않는다면 [이 문제 해결 가이드](troubleshooting#twl_broken)를 참고하십시오.
+{: .notice--warning}
+
+{% capture notice-10 %}
+이제 Luma3DS Updater를 열고 (A) 버튼을 누르기만 하면 Luma3DS를 최신 버전으로 업데이트할 수 있습니다.     
+이는 본체 업데이트와 다르며, 최신 버전의 Luma3DS 파일을 다운로드하여 압축을 풀어주는 것 뿐입니다.  
+따라서 업데이트되는 것은 SD 카드에 저장된 Luma3DS 파일이 전부입니다. SD 카드가 제거된 상태에서 기기를 켜면 CTR NAND에 존재하는 버전의 Luma3DS가 실행됩니다.
+{% endcapture %}
+
+<div class="notice--info">{{ notice-10 | markdownify }}</div>
+
+{% capture notice-6 %}   
+이제 기본적으로 커스텀 펌웨어 기반의 SysNAND로 부팅됩니다.    
+이제 (Select) 버튼을 누른 채 기기를 켜면 Luma3DS 구성 메뉴를 실행할 수 있습니다.    
+이제 (Start) 버튼을 누른 채 기기를 켜면 Hourglass9을 실행할 수 있습니다.     
+{% endcapture %}
+
+<div class="notice--info">{{ notice-6 | markdownify }}</div>
+
+추후에 [A9LH 업데이트](updating-a9lh) 페이지의 지시 사항을 따르면 arm9loaderhax를 업데이트할 수 있습니다.
+{: .notice--info}
+
+[NTR CFW](https://github.com/44670/BootNTR/)를 사용하려면 [이 페이지](https://github.com/44670/BootNTR/releases)에서 알맞은 `.zip` 파일을 다운로드하고 `.zip` 파일에서 `ntr.bin` 파일을 SD 카드의 최상위 경로에 복사하십시오. 그리고 [이 페이지](https://github.com/astronautlevel2/BootNTR/releases/latest)에서 `BootNTR.cia` 파일을 다운로드하여 설치하십시오.
+{: .notice--info}
+
+`NANDmin.bin` 파일을 보관해 두십시오. 나중에 벽돌이 되었을 때 Hourglass9을 통해 이 파일을 복원하여 기기를 살릴 수 있습니다.
+{: .notice--info}
+
+NAND 백업 파일을 안전한 위치에 복사했다면 `/files9/` 폴더에서 NAND 백업 파일을 제거해도 됩니다.
+{: .notice--info}
+
+{% capture notice-7 %}
+**이제 SD 카드의 최상위 경로에서 다음 목록에 *없는* 파일들은 제거해도 됩니다:**
+
+    + 3ds
+    + files9
+    + hblauncherloader
+    + luma
+    + Nintendo 3DS
+    + arm9loaderhax.bin
+    + boot.3dsx
+
+{% endcapture %}
+
+<div class="notice--info">{{ notice-7 | markdownify }}</div>
+
+기기를 다른 지역으로 변경하는 방법에 대해 알아보려면 [지역 변경](region-changing) 페이지를 참고하십시오.
+{: .notice--success}
+
+설치한 A9LH를 최신 버전으로 유지하는 방법에 대해 알아보려면 [A9LH 업데이트](updating-a9lh) 페이지를 참고하십시오.
+{: .notice--success}
+
+Luma3DS의 다양한 기능에 대해 알아보려면 [Luma3DS 위키](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)를 참고하십시오.
+{: .notice--success}
