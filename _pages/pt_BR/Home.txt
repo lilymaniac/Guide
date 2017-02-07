@@ -26,7 +26,7 @@ Se você possui um aparelho de desenvolvedor ("PANDA" ou "SNAKE"), cheque o [Gui
 **Este guia precisa da *sua* ajuda para [traduzi-lo](https://translate.3ds.guide/) para outros idiomas!**
 {: .notice--success}
 
-**Este guia precisa da *sua* ajuda para semear [estes](https://3ds.guide/rss.xml) torrents!**
+**Este guia precisa da *sua* ajuda para semear [estes]({{ site.baseurl }}/rss.xml) torrents!**
 {: .notice--success}
 
 **Leia todas as páginas introdutórias antes de prosseguir.**

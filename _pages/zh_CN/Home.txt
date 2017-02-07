@@ -26,7 +26,7 @@ permalink: /zh_CN/index.html
 **我们需要*你*帮忙[翻译](https://translate.3ds.guide/)本教程到其他语言！**
 {: .notice--success}
 
-**本教程需要*你*帮[这些](https://3ds.guide/rss.xml)种子做种！**
+**本教程需要*你*帮[这些]({{ site.baseurl }}/rss.xml)种子做种！**
 {: .notice--success}
 
 **请先阅读完本介绍页面后，再开始操作。**

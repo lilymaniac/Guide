@@ -26,7 +26,7 @@ permalink: /ja_JP/index.html
 **このサイトは*あなた*の[翻訳](https://translate.3ds.guide/)による支援を求めています。**
 {: .notice--success}
 
-**このガイドでは、 [トレントファイル](https://3ds.guide/rss.xml)をシードしていただける方を募集しています**
+**このガイドでは、 [トレントファイル]({{ site.baseurl }}/rss.xml)をシードしていただける方を募集しています**
 {: .notice--success}
 
 **実践する前に、紹介されているすべてのページをお読みください。**

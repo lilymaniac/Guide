@@ -26,7 +26,7 @@ permalink: /zh_TW/index.html
 **本指南正缺乏翻譯人員，請*你*幫助我們[翻譯](https://translate.3ds.guide/)本網站成的母語！**
 {: .notice--success}
 
-**本指南需要*你*的幫助來作種[這些](https://3ds.guide/rss.xml) BT 檔案！**
+**本指南需要*你*的幫助來作種[這些]({{ site.baseurl }}/rss.xml) BT 檔案！**
 {: .notice--success}
 
 **請先讀完本教學所有的序章再進行改機。**

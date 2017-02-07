@@ -26,7 +26,7 @@ Wenn du eine Entwicklerkonsole ("PANDA" oder "SNAKE") besitzt, wirf einen Blick 
 **Diese Anleitung benötigt *deine* Hilfe für die [Übersetzung](https://translate.3ds.guide/) in andere Sprachen!**
 {: .notice--success}
 
-**Diese Anleitung braucht *deine* Hilfe, um [diese](https://3ds.guide/rss.xml) Torrents zu seeden!**
+**Diese Anleitung braucht *deine* Hilfe, um [diese]({{ site.baseurl }}/rss.xml) Torrents zu seeden!**
 {: .notice--success}
 
 **Bevor du fortfährst, lies alle Einleitungsseiten.**

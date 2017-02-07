@@ -26,7 +26,7 @@ Si tienes una consola para desarrollador (como "PANDA" o "SNAKE"), consulta la [
 **¡Esta guía necesita *tu* ayuda para [traducirla](https://translate.3ds.guide/) a otros idiomas!**
 {: .notice--success}
 
-**¡Esta guía necesita *tu* ayuda para compartir [estos](https://3ds.guide/rss.xml) archivos torrent!**
+**¡Esta guía necesita *tu* ayuda para compartir [estos]({{ site.baseurl }}/rss.xml) archivos torrent!**
 {: .notice--success}
 
 **Lee todas las páginas de introducción antes de proceder.**

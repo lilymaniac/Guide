@@ -26,7 +26,7 @@ Hvis du har en ("PANDA" eller "SNAKE") utviklerkonsoll, sjekk ut [devGuide](http
 **Denne guiden trenger *din* hjelp til å [oversettes](https://translate.3ds.guide/) til andre språk!**
 {: .notice--success}
 
-**Denne guiden trenger *din* hjelp å dele [disse](https://3ds.guide/rss.xml) torrentene!**
+**Denne guiden trenger *din* hjelp å dele [disse]({{ site.baseurl }}/rss.xml) torrentene!**
 {: .notice--success}
 
 **Lese alle innledningssidene før du fortsetter.**

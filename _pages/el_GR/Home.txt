@@ -26,7 +26,7 @@ permalink: /el_GR/index.html
 **Αυτός ο οδηγός χρειάζεται την βοήθειά *σας* για την [translate](https://translate.3ds.guide/) του σε άλλες γλώσσες!**
 {: .notice--success}
 
-**Αυτός ο οδηγός χρειάζεται την βοήθειά *σας* για να τροφοδοτήσει [these](https://3ds.guide/rss.xml) τα torrent!**
+**Αυτός ο οδηγός χρειάζεται την βοήθειά *σας* για να τροφοδοτήσει [these]({{ site.baseurl }}/rss.xml) τα torrent!**
 {: .notice--success}
 
 **Διαβάστε όλες τις εισαγωγικές σελίδες πριν προχωρήσετε.**
