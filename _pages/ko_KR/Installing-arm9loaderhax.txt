@@ -144,6 +144,7 @@ arm9loaderhax를 설치하고 Luma3DS가 알맞은 옵션으로 구성되면 이
 3. (B) 버튼을 누른 뒤 "Health&Safety Inject" 옵션을 선택하십시오.
 4. 주어진 키 조합을 입력하십시오.
 5. 지역에 맞는 FBI injectable `.app` 파일을 선택하십시오.
+  + `fbi-2.4.2-injectable.zip` 파일의 _내용물을_  SD 카드의 `/files9/` 폴더에 복사했음에도 상하좌우 버튼으로 FBI injectable `.app` 파일을 선택할 수 없다면 [이 문제 해결 가이드](troubleshooting#uig_fbi)를 참고하십시오.
 6. (A) 버튼을 눌러 주입을 진행하십시오.
 7. (Start) 버튼을 눌러 기기를 다시 시작하십시오.
 8. 그래도 안전을 위한 주의사항 앱이 실행되며 이전에 기기를 게이트웨이로 다운그레이드한 적이 있다면 [이 문제 해결 가이드](troubleshooting#gw_fbi)를 참고하십시오.
