@@ -1,7 +1,7 @@
 ---
 title: "홈브류 런처 (사운드핵스)" #
 lang: ko
-permalink: /ko_KR/homebrew-launcher-(soundhax).html
+permalink: /homebrew-launcher-(soundhax).html
 ---
 
 홈브류 런처는 다양한 방법을 통해 실행할 수 있습니다.

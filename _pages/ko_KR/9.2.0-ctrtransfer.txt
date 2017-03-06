@@ -1,7 +1,7 @@
 ---
 title: "9.2.0 ctrtransfer" #
 lang: ko
-permalink: /ko_KR/9.2.0-ctrtransfer.html
+permalink: /9.2.0-ctrtransfer.html
 ---
 
 2.1.0 버전으로 다운그레이드했으나 모종의 이유로 **정상적인 NAND 백업이 없을 경우**, 이 가이드는 당신을 위한 가이드입니다.

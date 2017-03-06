@@ -1,7 +1,7 @@
 ---
 title: "Decrypt9 (브라우저)" #
 lang: ko
-permalink: /ko_KR/decrypt9-(browser).html
+permalink: /decrypt9-(browser).html
 ---
 
 이 가이드는 가장 먼저 다목적 툴킷 Decrypt9의 실행을 돕고, 이를 통해 추가 익스플로잇 실행에 필요한 취약점을 가진 2.1.0 버전을 설치합니다.

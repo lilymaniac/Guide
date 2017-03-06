@@ -6,11 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en-US"
-title                    : "3DS Guide"
+locale                   : "ko-KR"
+title                    : "3DS 가이드"
 title_separator          : "-"
 name                     : "Plailect & lilymaniac"
-description              : "Full arm9loaderhax CFW Guide"
+description              : "arm9loaderhax 커스텀 펌웨어 완벽 가이드"
 url                      : "https://lilymaniac.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/Guide" # the subpath of your site, e.g. "/blog"
 repository               : "lilymaniac/Guide" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -152,7 +152,7 @@ exclude: [
   _pages/hu_HU,
   # _pages/it_IT,
   # _pages/ja_JP,
-  _pages/ko_KR,
+  # _pages/ko_KR,
   # _pages/ms_MY,
   # _pages/no_NO,
   _pages/nl_NL,

@@ -1,7 +1,7 @@
 ---
 title: "Decrypt9 (홈브류 런처)" #
 lang: ko
-permalink: /ko_KR/decrypt9-(homebrew-launcher).html
+permalink: /decrypt9-(homebrew-launcher).html
 ---
 
 #### 준비물

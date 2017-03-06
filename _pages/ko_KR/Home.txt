@@ -6,11 +6,11 @@ header:
   overlay_image: images/home-page-feature.jpg
   overlay_filter: 0.5
   cta_label: "시작하기" #
-  cta_url: "/ko_KR/get-started" #
+  cta_url: "/get-started" #
   caption:
 excerpt: "순정 펌웨어에서 arm9loaderhax까지, <br /> 3DS 커스텀 펌웨어 완벽 가이드.<br />" #
 lang: ko
-permalink: /ko_KR/index.html
+permalink: /index.html
 ---
 
 {% capture notice-home %}

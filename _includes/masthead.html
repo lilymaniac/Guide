@@ -6,7 +6,7 @@
           {% assign split_path = page.path | split: "/" %}
           {% assign locale = split_path[1] %}
           {% assign titles = site.data.navigation[locale].main %}
-          {% if locale == 'en_US' %}
+          {% if locale == 'ko_KR' %}
             {% assign locale_var = '/' %}
           {% else %}
             {% assign locale_var = locale | prepend:'/' | append:'/' %}
@@ -28,7 +28,8 @@
           {% else %}
             {% assign langless_url = split_url[1] %}
           {% endif %}
-          <li class="masthead__menu-item"><a href="{{ site.baseurl }}/{{ langless_url }}">English</a></li>
+          <li class="masthead__menu-item"><a href="{{ site.baseurl }}/{{ langless_url }}">한국어</a></li>
+          <li class="masthead__menu-item"><a href="{{ site.baseurl }}/en_US/{{ langless_url }}">English</a></li>
           <li class="masthead__menu-item"><a href="{{ site.baseurl }}/es_ES/{{ langless_url }}">Español</a></li>
           <li class="masthead__menu-item"><a href="{{ site.baseurl }}/de_DE/{{ langless_url }}">Deutsch</a></li>
           <li class="masthead__menu-item"><a href="{{ site.baseurl }}/fr_FR/{{ langless_url }}">Français</a></li>
@@ -46,7 +47,6 @@
           <!-- <li class="masthead__menu-item"><a href="{{ site.baseurl }}/el_GR/{{ langless_url }}">Ελληνικά</a></li> -->
           <!-- <li class="masthead__menu-item"><a href="{{ site.baseurl }}/he_IL/{{ langless_url }}">עברית‎</a></li> -->
           <!-- <li class="masthead__menu-item"><a href="{{ site.baseurl }}/sv_SE/{{ langless_url }}">Svenska</a></li> -->
-          <!-- <li class="masthead__menu-item"><a href="{{ site.baseurl }}/ko_KR/{{ langless_url }}">한국어</a></li> -->
           <li class="masthead__menu-item"><a href="{{ site.baseurl }}/no_NO/{{ langless_url }}">Norsk</a></li>
           <li class="masthead__menu-item"><a href="{{ site.baseurl }}/ja_JP/{{ langless_url }}">日本語</a></li>
           <!-- <li class="masthead__menu-item"><a href="{{ site.baseurl }}/ar_SA/{{ langless_url }}">اللغة العربية</a></li> -->

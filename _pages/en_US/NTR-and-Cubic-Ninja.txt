@@ -1,7 +1,7 @@
 ---
 title: "NTR and Cubic Ninja" #
 lang: en
-permalink: /ntr-and-cubic-ninja.html
+permalink: /en_US/ntr-and-cubic-ninja.html
 ---
 
 **NTR Cubic Ninja will work for JPN New 3DS ONLY!**

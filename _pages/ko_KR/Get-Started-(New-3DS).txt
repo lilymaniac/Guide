@@ -1,7 +1,7 @@
 ---
 title: "시작하기 (뉴 3DS)" #
 lang: ko
-permalink: /ko_KR/get-started-(new-3ds).html
+permalink: /get-started-(new-3ds).html
 ---
 
 아래의 표에서 본인 기기의 버전에 해당하는 페이지를 선택하십시오.

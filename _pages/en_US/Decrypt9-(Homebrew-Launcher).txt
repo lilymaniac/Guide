@@ -1,7 +1,7 @@
 ---
 title: "Decrypt9 (Homebrew Launcher)" #
 lang: en
-permalink: /decrypt9-(homebrew-launcher).html
+permalink: /en_US/decrypt9-(homebrew-launcher).html
 ---
 
 #### What you need

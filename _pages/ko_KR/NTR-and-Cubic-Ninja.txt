@@ -1,7 +1,7 @@
 ---
 title: "NTR 및 큐빅 닌자" #
 lang: ko
-permalink: /ko_KR/ntr-and-cubic-ninja.html
+permalink: /ntr-and-cubic-ninja.html
 ---
 
 **NTR 큐빅 닌자는 JPN 뉴 3DS에서만 사용할 수 있습니다!**
