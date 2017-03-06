@@ -10,7 +10,7 @@ sitemap: false
 **자주 방문하는 페이지**
 
 + [arm9loaderhax 설치](installing-arm9loaderhax)
-+ [Homebrew Launcher (Soundhax)](homebrew-launcher-(soundhax))
++ [홈브류 런처 (사운드핵스)](homebrew-launcher-(soundhax))
 + [Decrypt9 (홈브류 런처)](decrypt9-(homebrew-launcher))
 {% endcapture %}
 <div class="notice--info">{{ notice-1 | markdownify }}</div>
@@ -20,10 +20,10 @@ sitemap: false
 
 + [2.1.0 ctrtransfer](2.1.0-ctrtransfer)
 + [9.2.0 ctrtransfer](9.2.0-ctrtransfer)
-+ [게임 팩 업데이트](cart-update)
-+ [기여하신 분들](credits)
++ [게임 팩을 통한 업데이트](cart-update)
++ [기여자](credits)
 + [Decrypt9 (브라우저)](decrypt9-(browser))
-+ [Decrypt9 (Homebrew Launcher)](decrypt9-(homebrew-launcher))
++ [Decrypt9 (홈브류 런처)](decrypt9-(homebrew-launcher))
 + [Decrypt9 (MSET)](decrypt9-(mset))
 + [기부](donations)
 + [F3 (Linux)](f3-(linux))
@@ -34,11 +34,11 @@ sitemap: false
 + [시작하기](get-started)
 + [H2testw (Windows)](h2testw-(windows))
 + [홈](/)
-+ [Homebrew Launcher (Soundhax)](homebrew-launcher-(soundhax))
-+ [Homebrew Launcher (Alternatives)](homebrew-launcher-(alternatives))
-+ [Installing arm9loaderhax](installing-arm9loaderhax)
-+ [EmuNAND기반 데이터 이동](move-emunand)
-+ [NTR 및 Cubic Ninja](ntr-and-cubic-ninja)
++ [홈브류 런처 (사운드핵스)](homebrew-launcher-(soundhax))
++ [홈브류 런처 (기타)](homebrew-launcher-(alternatives))
++ [arm9loaderhax 설치](installing-arm9loaderhax)
++ [EmuNAND에서 데이터 이사](move-emunand)
++ [NTR 및 큐빅 닌자](ntr-and-cubic-ninja)
 + [지역 변경](region-changing)
 + [문제 해결](troubleshooting)
 + [A9LH 업데이트](updating-a9lh)

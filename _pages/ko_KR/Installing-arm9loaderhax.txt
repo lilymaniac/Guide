@@ -4,31 +4,31 @@ lang: ko
 permalink: /ko_KR/installing-arm9loaderhax.html
 ---
 
-가이드의 마지막 단계는 [AuroraWright](https://github. com/AuroraWright/) 의 SafeA9LHInstaller를 이용하여 arm9loaderhax를 설치하고 Luma3DS가 부팅하는 즉시 실행되도록 설정하는 것입니다.
+이 가이드의 마지막 단계는 [AuroraWright](https://github.com/AuroraWright/)의 SafeA9LHInstaller를 이용하여 arm9loaderhax를 설치하고 기기를 켜는 즉시 Luma3DS가 실행되도록 설정하는 것입니다.
 {: .notice}
 
 이 가이드는 [AuroraWright의 포크 버전](https://github.com/AuroraWright/arm9loaderhax) arm9loaderhax를 설치합니다.
 {: .notice--info}
 
-아울러 arm9loaderhax의 페이로드 실행기능을 설정함으로써 벽돌이 된 SysNAND를 백업파일을 복원하여 되살릴 수도 있게 됩니다.
+아울러 백업 파일을 복원하여 벽돌이 된 SysNAND를 복구할 수 있도록 arm9loaderhax에서 페이로드를 실행하는 기능도 설정합니다.
 {: .notice--info}
 
-**다른 기기의 OTP를 사용하지 마세요. 100% 벽돌이 됩니다.**
+**다른 기기의 OTP를 사용하지 마십시오. 100% 벽돌이 됩니다.**
 {: .notice--danger}
 
 #### 단계별 개요
 
-이 섹션은 최종 목표인 arm9loaderhax의 설치를 다룹니다.
+이 섹션에서는 다른 모든 단계들의 최종 목적이었던 arm9loaderhax 설치를 진행합니다.
 
-arm9loaderhax는 NAND firm 파티션에 영구적으로 설치가 가능하고, OS가 로드되기 전에 실행되므로 한번 설치하고 나면 *모든* 버전에서 작동할 뿐만 아니라 홈 메뉴가 작동하지 않거나 타이틀의 설치가 잘못되는 등의 A9LH가 설치되지 않았을 경우에 벽돌이 될 만한 상황에서도 기기를 보호하고 복구를 가능하게 합니다.
+arm9loaderhax는 NAND firm 파티션에 영구적으로 설치가 가능하며, 대부분의 OS가 로드되기 전에 실행되므로 한번 설치하고 나면 *모든* 시스템 버전에서 작동합니다. 또한 홈 메뉴가 작동하지 않거나 잘못된 타이틀을 설치하는 등, A9LH가 설치되지 않았다면 벽돌이 될 만한 대부분의 상황에서도 기기를 보호하고 복구를 가능하게 합니다.
 
-arm9loaderhax는 NAND에서 로딩된 후 `arm9loaderhax.bin` 파일을 실행시키며, 이 파일은 유효한 arm9 페이로드이기만 하면 언제든지 교체가 가능합니다. Luma3DS는 Luma3DS chainloader를 통해 다른 arm9 페이로드를 실행하는 기능을 지원하므로 필요시 이용이 가능합니다.
+`arm9loaderhax.bin` 파일은 NAND 로딩이 끝난 후에 arm9loaderhax에 의해 실행되며, 유효한 arm9 페이로드이기만 하면 언제든지 교체가 가능합니다. 하지만 Luma3DS는 Luma3DS chainloader를 통하여 다른 arm9 페이로드를 실행하는 기능을 지원하므로 Luma3DS를 이용하면 됩니다.
 
-여기에서는 [AuroraWright](https://github.com/AuroraWright/)의 Luma3DS를 사용하여 패치된 SysNAND를 부팅하므로 EmuNAND를 사용할 필요가 없으며, 해킹된 3DS의 사용을 크게 단순화시키고 사용되는 SD 카드의 공간도 절약할 수 있습니다.
+이 가이드에서는 [AuroraWright](https://github.com/AuroraWright/)의 Luma3DS를 사용하여 패치된 SysNAND로 부팅하므로 EmuNAND를 사용할 필요가 없으며, 해킹된 3DS의 사용을 크게 단순화시키고 SD 카드의 공간도 절약할 수 있습니다.
 
-arm9loaderhax를 설치하고 Luma3DS의 설정이 완료되면 백업을 복원할 것입니다.
+arm9loaderhax를 설치하고 Luma3DS가 알맞은 옵션으로 구성되면 이전에 백업했던 파일을 복원할 것입니다.
 
-이 과정을 진행하는 동안 다음 프로그램들도 설치하게 됩니다:    
+이 과정을 진행하는 동안 다음 프로그램도 함께 설치합니다:    
 
 +  **FBI** *(CIA 형식의 게임 및 애플리케이션 설치)*
 +  **Luma3DS Updater** *(간단한 커스텀 펌웨어 업데이트)*
@@ -36,10 +36,10 @@ arm9loaderhax를 설치하고 Luma3DS의 설정이 완료되면 백업을 복원
 
 #### 준비물
 
-* <i class="fa fa-magnet" aria-hidden="true" title="이것은 자석링크입니다. 토렌트 클라이언트를 이용하여 다운로드하세요."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. 토렌트 클라이언트를 이용하여 다운로드하세요."></i> - [`fbi-2.4.2-injectable.zip`](magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525&dn=fbi-2.4.2-injectable.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* <i class="fa fa-magnet" aria-hidden="true" title="This is a magnet link. 토렌트 클라이언트를 이용하여 다운로드하세요."></i> - [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
-* 최신 버전의 [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(`.7z` 파일)*
+* <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [`fbi-2.4.2-injectable.zip`](magnet:?xt=urn:btih:f978b4cf5eda72823240b9c649f3fd2940a9f525&dn=fbi-2.4.2-injectable.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [`data_input_v3.zip`](magnet:?xt=urn:btih:a1195c9f7ab650fa7c7bf020b51fc19ea8d9440c&dn=data%5Finput%5Fv3.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* 최신 포크 버전의 [SafeA9LHInstaller](https://github.com/Plailect/SafeA9LHInstaller/releases/latest) *(`.7z` 파일)*
 * 최신 버전의 [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`.7z` 파일)*
 * 최신 버전의 [Luma3DS](https://github.com/AuroraWright/Luma3DS/releases/latest) *(`.7z` 파일)*
 * 최신 버전의 [hblauncher_loader](https://github.com/yellows8/hblauncher_loader/releases/latest)
@@ -49,173 +49,174 @@ arm9loaderhax를 설치하고 Luma3DS의 설정이 완료되면 백업을 복원
 * 최신 버전의 [FBI](https://github.com/Steveice10/FBI/releases/latest)
 * 홈브류 [스타터 킷](http://smealum.github.io/ninjhax2/starter.zip)
 
-#### 진행 방법
+#### 지시 사항
 
 ##### 섹션 I - 준비 작업
 
 {% capture notice-5 %}
-**SD 카드가 손상되지 않았는지 확인하세요!**
+**SD 카드가 손상되지 않았는지 확인하십시오!**
 
-**손상된 SD 카드를 고치지 않고 사용하면 기기가 벽돌이 될 수 있습니다!**
+**손상된 SD 카드를 고치지 않고 사용하면 벽돌이 될 수 있습니다!**
 
-**SD 카드가 손상된 것 같으면 [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)), 또는 [F3X (Mac)](f3x-(mac))를 사용하여 SD 카드의 오류 여부를 확인해보세요!**
+**SD 카드가 손상된 것 같다면 [H2testw (Windows)](h2testw-(windows)), [F3 (Linux)](f3-(linux)) 또는 [F3X (Mac)](f3x-(mac))를 사용하여 SD 카드의 오류를 확인할 수 있습니다!**
 {% endcapture %}
 
 <div class="notice--danger">{{ notice-5 | markdownify }}</div>
 
-1. **SD 카드에 `/files9/` 폴더가 있다면 이를 통째로 컴퓨터에 복사하고 여러 장소에 백업해두세요. (클라우드 드라이브 등) 기기에 문제가 생겼을 경우 이 폴더 안의 파일들로 데이터 손실을 최소화 할 수 있습니다.**
-2. SD 카드의 최상위 경로에 `cias` 폴더가 없을 경우 폴더를 만드세요.
-3. SD 카드의 최상위 경로에 `3ds` 폴더가 있으면 이를 삭제하세요.
-5. `starter.zip` 파일 내 `starter` 폴더의 _내용물을_ SD 카드의 최상위 경로에 복사하세요.
-  + 방금 삭제한 `3ds` 폴더를 새로운 `3ds` 폴더로 교체하는 작업입니다.
-6. SafeA9LHInstaller `.7z` 파일의 _내용물 만_ SD 카드의 최상위 경로에 복사하세요.
-7. data_input `.zip` 파일 내 `a9lh` 폴더를 SD 카드의 최상위 경로에 복사하세요.
-8. arm9loaderhax `.7z` 파일의 _내용물 만_ SD 카드의 `a9lh` 폴더에 복사하세요.
-9. hblauncher_loader `.zip` 파일에서 `hblauncher_loader.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사하세요.
-10. Luma3DS Updater `.zip` 파일에서 `lumaupdater.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사하세요.
-11. FBI `.zip` 파일에서 `FBI.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사하세요.
-12. Luma3DS `.7z` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 최상위 경로에 복사하고 기존 파일을 덮어쓰세요.
-13. SD 카드의 최상위 경로에 `luma` 폴더를 만드세요.
-14. SD 카드의 `luma` 폴더에 `payloads` 폴더를 만드세요.
-15. Hourglass9 `.zip` 파일에서 `Hourglass9.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하고 `Hourglass9.bin` 파일의 이름을 `start_Hourglass9.bin`으로 변경하세요.
-17. `aeskeydb.bin` 파일을 SD 카드의 `/files9/` 폴더에 복사하세요.
-18. `DspDump.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사하세요.
-19. `fbi-2.4.2-injectable.zip` 파일의 _내용물 만_ SD 카드의 `/files9/` 폴더에 복사하세요.
+1. **SD 카드에 `/files9/` 폴더가 있으면 폴더를 컴퓨터의 안전한 위치에 복사하고 여러 위치(클라우드 드라이브 등)에 백업하십시오. 시스템이 손상되었을 경우 이 폴더 안의 파일들로 데이터 손실을 방지할 수 있습니다.**
+2. SD 카드의 최상위 경로에 `cias` 폴더가 없으면 폴더를 새로 만드십시오.
+3. SD 카드의 최상위 경로에 `3ds` 폴더가 있으면 폴더를 삭제하십시오.
+5. `starter.zip` 파일 내 `starter` 폴더의 _내용물을_  SD 카드의 최상위 경로에 복사하십시오.
+  + 이 단계는 방금 삭제한 `3ds` 폴더를 새로운 `3ds` 폴더로 교체하는 과정입니다.
+6. SafeA9LHInstaller `.7z` 파일의 _내용물을_  SD 카드의 최상위 경로에 복사하십시오.
+7. data_input `.zip` 파일에서 `a9lh` 폴더를 SD 카드의 최상위 경로에 복사하십시오.
+8. arm9loaderhax release `.7z` 파일의 _내용물을_  SD 카드의 `a9lh` 폴더에 복사하십시오.
+9. hblauncher_loader `.zip` 파일에서 `hblauncher_loader.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사하십시오.
+10. Luma3DS Updater `.zip` 파일에서 `lumaupdater.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사하십시오.
+11. FBI `.zip` 파일에서 `FBI.cia` 파일을 SD 카드의 `/cias/` 폴더에 복사하십시오.
+12. Luma3DS `.7z` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 최상위 경로에 복사하십시오. 동일한 파일이 있으면 덮어씌우십시오.
+13. SD 카드의 최상위 경로에 `luma` 폴더를 만드십시오.
+14. SD 카드의 `luma` 폴더에 `payloads` 폴더를 만드십시오.
+15. Hourglass9 `.zip` 파일에서 `Hourglass9.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하고 `Hourglass9.bin` 파일의 이름을 `start_Hourglass9.bin`으로 바꾸십시오.
+17. `aeskeydb.bin` 파일을 SD 카드의 `/files9/` 폴더에 복사하십시오.
+18. `DspDump.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사하십시오.
+19. `fbi-2.4.2-injectable.zip` 파일의 _내용물을_  SD 카드의 `/files9/` 폴더에 복사하십시오.
 
 ##### 섹션 II - arm9loaderhax 설치
 
-1. SD 카드를 다시 3DS에 삽입하세요.
-2. You should be on 2.1.0
-3. Go to `http://2xrsa.3ds.guide` on your 3DS
-  + "서비스 불가능 지역입니다. (This service is not available in your region)" 오류가 뜬다면 본체 설정에서 기기의 국적을 2.1.0 ctrtransfer에서 설치한 NAND의 지역에 맞게 변경하세요.
-  + 다른 오류가 뜨면 [이 문제 해결 가이드](troubleshooting#ts_browser)를 참고하세요.
-  + 화면 깨짐현상이 나타나면 [이 문제 해결 가이드](troubleshooting#ts_safe_a9lh_screen)를 참고하세요.
-  2DS 또는 뉴 3DS에서 무선 인터넷 연결을 끈 채 2.1.0 버전으로 다운그레이드했다면, 충전기와 배터리를 제거하고 몇 초 후 다시 장착하여 무선 인터넷 연결을 다시 켤 수 있습니다.
-4. Press (Select) to Full Install
-5. The installer will now install arm9loaderhax on your device (this is very fast)
-6. Shut down your console by pressing any button
-7. Copy your console specific `otp.bin` from the `/a9lh/` folder on your SD card to a safe location on your computer and back it up to multiple locations (such as online file storage), then reinsert your SD card into your 3DS
+1. SD 카드를 다시 3DS에 삽입하십시오.
+2. 기기가 2.1.0 버전이어야 합니다.
+3. 3DS에서 `http://2xrsa.3ds.guide` 주소에 접속하십시오.
+  + "This service is not available in your region" 오류가 나타난다면 본체 설정에서 기기의 국적을 2.1.0 ctrtransfer에서 설치한 NAND의 지역에 맞게 바꾸십시오.
+  + 다른 오류가 나타난다면 [이 문제 해결 가이드](troubleshooting#ts_browser)를 참고하십시오.
+  + 화면이 깨진다면 [이 문제 해결 가이드](troubleshooting#ts_safe_a9lh_screen)를 참고하십시오.
+  + 2DS 또는 뉴 3DS에서 무선 인터넷 연결이 꺼져 있다면, 충전기와 배터리를 제거하고 몇 초 후 다시 장착하여 무선 인터넷 연결을 다시 켤 수 있습니다.
+4. (Select) 버튼을 눌러 Full Install을 수행하십시오.
+5. 인스톨러가 기기에 arm9loaderhax를 설치할 것입니다 (이 작업은 매우 빨리 끝납니다).
+6. 아무 버튼이나 눌러 기기의 전원을 끄십시오.
+7. SD 카드의 `/a9lh/` 폴더에서 기기 고유의 `OTP.bin` 파일을 컴퓨터의 안전한 위치에 복사하고 여러 위치(클라우드 드라이브 등)에 백업하십시오. 그리고 SD 카드를 다시 3DS에 삽입하십시오.
 
-##### 섹션 III - Luma3DS 설정하기
+##### 섹션 III - Luma3DS 구성
 
-1. (Select) 버튼을 누른 채 기기를 부팅하여 Luma3DS 설정 메뉴로 들어가세요.
-  + (Select) 버튼을 누른 채 전원을 켜야 합니다.
-  + 검은 화면이 보인다면 [이 문제 해결 가이드](troubleshooting#ts_sys_a9lh)를 참고하세요.   
-  + SafeA9LHInstaller가 로딩된다면 [이 문제 해결 가이드](troubleshooting#ts_safe_a9lh)를 참고하세요.
-2. (A) 버튼과 십자 버튼을 이용해 다음 옵션들을 설정하세요:    
+1. (Select) 버튼을 누른 채 기기를 켜 Luma3DS 구성 메뉴로 진입하십시오.
+  + 전원 버튼을 누르기 전에 (Select) 버튼을 먼저 눌러야 합니다.
+  + 검은 화면이 보인다면 [이 문제 해결 가이드](troubleshooting#ts_sys_a9lh)를 참고하십시오.   
+  + SafeA9LHInstaller가 켜진다면 [이 문제 해결 가이드](troubleshooting#ts_safe_a9lh)를 참고하십시오.
+2. (A) 버튼과 십자 버튼을 이용하여 다음 옵션을 켜십시오:    
   + **"Autoboot SysNAND"**
   + **"Use SysNAND FIRM if booting with R"**
   + **"Show NAND or user string in System Settings"**
-3. **뉴 3DS** 사용자는 다음 옵션들도 설정하실 수 있습니다:
-  + **"New 3DS CPU" to "Clock+L2(x)"**
+3. **뉴 3DS**를 사용 중이라면 다음 옵션 *또한*  켜십시오:
+  + **"New 3DS CPU" 옵션을 "Clock+L2(x)"로**
     + 이 옵션은 많은 게임의 프레임을 향상시키지만, 일부 게임은 불안정해질 수 있습니다.
-    + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보세요.
-    + **This breaks the Homebrew Launcher on 11.3!**
-4. (Start) 버튼을 눌러 저장하고 기기를 재시작하세요.
-  + 검은 화면이 보인다면 그냥 다음 섹션으로 넘어가세요.   
-  + "Failed to mount CTRNAND" 오류가 뜰 경우 그냥 다음 섹션으로 넘어가세요.     
+    + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보십시오.
+    + **이 옵션을 켜면 11.3 버전에서 홈브류 런처를 실행할 수 없습니다!**
+4. (Start) 버튼을 눌러 저장하고 기기를 다시 시작하십시오.
+  + 검은 화면이 보인다면 그냥 다음 섹션으로 넘어가십시오.   
+  + "Failed to mount CTRNAND" 오류가 나타난다면 그냥 다음 섹션으로 넘어가십시오.     
 
 ##### 섹션 IV - 시스템 복원
 
-EmuNAND 기반의 커스텀 펌웨어의 데이터를 새 SysNAND 커스텀 펌웨어로 옮기고 싶은 경우, 이 섹션의 단계 1-4 대신에 [EmuNAND 이사](move-emunand) 가이드에 따라 진행하세요.
+이 가이드를 따라하기 전에 이미 가지고 있던 EmuNAND의 데이터를 새 SysNAND 커스텀 펌웨어로 옮기고 싶은 경우, 이 섹션의 처음 네 단계 대신 [EmuNAND에서 데이터 이사](move-emunand) 페이지를 따라 진행하십시오.
 {: .notice--info}
 
-1. (Start) 버튼을 누른채 기기를 부팅시켜서 Hourglass9을 실행하세요.
-2. "SysNAND Backup/Restore"을 선택하세요.
-3. Go to "SysNAND Restore (keep a9lh)"
-4. Input the key combo given, then select the `NANDmin.bin` image when prompted by pressing (A)
-5. (Start) 버튼을 눌러 기기를 재시작하세요.
-  + 검은 화면이 보인다면 [9.2.0 ctrtransfer](9.2.0-ctrtransfer) 가이드를 참고하세요.
-6. 백업이 3.0.0~4.5.0 버전일 경우에는 필요한 펌웨어를 따로 다운받기 전까지는 기기가 부팅되지 않을 겁니다:
-  + [이 파일](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)을 다운받고 이름을 `firmware.bin`으로 변경하세요.
-  + [이 파일](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)을 다운받으세요.
-  + `firmware.bin` 파일과 `cetk` 파일을 SD 카드의 `/luma/` 폴더에 복사하세요.
-  + 3DS를 업데이트한 이후에는 두 파일을 삭제하세요.
-7. "본체 설정"의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택하여 3DS를 업데이트하세요.
-  + A9LH + Luma (지금 적용되어 있는 것)가 설치된 상태에서는 업데이트 해도 안전합니다. 그만 물어보세요.
-  + 2.1.0 버전의 뉴 3DS를 절대로 업데이트하지 말라는 경고는 NAND 백업을 복원한 시점부터 해당되지 않습니다.
-  + 오류가 발생한다면, DNS 설정을 "자동"으로 설정하십시오.
-  + 계속 오류가 발생하고 NAND 버전이 9.2.0 미만이면 [9.2.0 ctrtransfer](9.2.0-ctrtransfer) 가이드를 참고하세요.
+1. (Start) 버튼을 누른 채 기기를 켜 Hourglass9을 여십시오.
+2. "SysNAND Backup/Restore"를 선택하십시오.
+3. "SysNAND Restore (keep a9lh)"를 선택하십시오.
+4. 주어진 키 조합을 입력한 뒤 메시지가 나타나면 (A) 버튼을 눌러 `NANDmin.bin` 이미지를 선택하십시오.
+5. (Start) 버튼을 눌러 기기를 다시 시작하십시오.
+  + 검은 화면이 보인다면 [9.2.0 ctrtransfer](9.2.0-ctrtransfer) 페이지를 참고하십시오.
+6. 백업 파일이 3.0.0~4.5.0 버전이라면 필요한 펌웨어를 직접 다운로드하기 전까지는 기기가 켜지지 않을 것입니다:
+  + [이 파일](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/00000056)을 다운로드하고 파일의 이름을 `firmware.bin`으로 바꾸십시오.
+  + [이 파일](http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000002/cetk)을 다운로드하십시오.
+  + `firmware.bin` 파일과 `cetk` 파일을 SD 카드의 `/luma/` 폴더에 복사하십시오.
+  + 3DS를 업데이트한 뒤 두 파일을 삭제하십시오.
+7. "본체 설정"의 "기타 설정"에서 가장 오른쪽에 있는 "본체 업데이트"를 선택하여 3DS를 업데이트하십시오.
+  + A9LH + Luma3DS(지금 적용되어 있는 것) 상태에서 하는 업데이트는 안전합니다. 그만 물어보십시오.
+  + 2.1.0 버전의 뉴 3DS를 절대로 업데이트하지 말라는 경고는 NAND 백업 파일을 복원한 시점부터 해당되지 않습니다.
+  + 오류가 발생한다면 DNS 설정을 "자동"으로 설정하십시오.
+  + 계속 오류가 발생하며 NAND 백업 파일의 버전이 9.2.0 미만이라면 [9.2.0 ctrtransfer](9.2.0-ctrtransfer) 페이지를 참고하십시오.
 
 ##### 섹션 V - FBI 주입
 
-1. Boot your device while holding (Start) to enter Hourglass9
-2. "SysNAND Backup/Restore"로 가서 "Health&Safety Dump" 옵션을 선택하여 안전을 위한 주의사항 앱을 `hs.app` 파일로 덤핑하세요. **(상하좌우 버튼으로 이름을 바꿀 수 있습니다.)**
-3. (B) 버튼을 누르고 "Health&Safety Inject" 옵션을 선택하세요.
-4. Input the key combo given
-5. 지역에 맞는 FBI injectable `.app` 파일을 선택하세요.
-6. (A) 버튼을 눌러 주입을 진행하세요.
-7. Press (Start) to reboot
-8. 기존 안전을 위한 주의사항 앱이 실행되고 이전에 게이트웨이로 다운그레이드한 적이 있다면 [이 문제 해결 가이드](troubleshooting#gw_fbi)를 참고하세요.
+1. (Start) 버튼을 누른 채 기기를 켜 Hourglass9을 여십시오.
+2. "SysNAND Options", "Miscellaneous", "Health&Safety Dump" 옵션을 차례로 선택하여 안전을 위한 주의사항 앱을 `hs.app` 파일로 덤프하십시오 **(상하좌우 버튼으로 이름을 바꿀 수 있습니다)**.
+3. (B) 버튼을 누른 뒤 "Health&Safety Inject" 옵션을 선택하십시오.
+4. 주어진 키 조합을 입력하십시오.
+5. 지역에 맞는 FBI injectable `.app` 파일을 선택하십시오.
+6. (A) 버튼을 눌러 주입을 진행하십시오.
+7. (Start) 버튼을 눌러 기기를 다시 시작하십시오.
+8. 그래도 안전을 위한 주의사항 앱이 실행되며 이전에 기기를 게이트웨이로 다운그레이드한 적이 있다면 [이 문제 해결 가이드](troubleshooting#gw_fbi)를 참고하십시오.
 
 ##### 섹션 VI - 설치 마무리
 
-1. 안전을 위한 주의사항(현재는 FBI) 앱을 실행하세요.
-2. "SD"를 선택하세요.
-3. "cias"를 선택하세요.
-4. "\<current directory>"를 선택하세요.
-5. Select the "Install all CIAs" option, then press (A) to confirm
-6. (B) 버튼을 눌러 SD 디렉터리로 돌아가세요.
-7. `arm9loaderhax.bin`로 가서 (A) 버튼을 누르고 "Copy" 옵션을 선택하세요.
-8. (B) 버튼을 눌러 FBI 메인 메뉴로 돌아가세요.
-9. "CTR NAND"를 선택하세요.
-10. Select "\<current directory>"
-11. "Paste" 옵션을 선택 후 (A) 버튼을 눌러 진행하세요.
-12. 홈 버튼을 눌러 빠져나오세요.
-13. Launch the Homebrew Launcher from the home menu
-14. Select "DSP Dump"
-15. Press (Start) when prompted to exit
-16. Press (Start) to open the Homebrew Launcher exit menu
-17. Press (A) while holding (Start) to reboot into Hourglass9
-18. "SysNAND Backup/Restore"로 가서 "Health&Safety Inject"를 선택하세요.
-19. `hs.app` (FBI를 담고 있지 않은 원본 앱) 파일을 선택하고 (A) 버튼을 눌러 주입하세요.
-20. 메인 메뉴에서 (Select) 버튼을 누른 후 SD 카드를 빼세요.
-21. SD 카드가 제거된 상태에서 (Start) 버튼을 눌러 기기를 재시작하세요.
-  + SD 카드가 제거된 상태에서 부팅하여 CTRNAND 기반의 Luma3DS 설치를 설정합니다.
-22. Use the (A) button and the D-Pad to turn on the following:    
+1. 안전을 위한 주의사항(지금은 FBI)을 여십시오.
+2. "SD" 디렉터리를 선택하십시오.
+3. "cias" 디렉터리를 선택하십시오.
+4. "\<current directory>" 디렉터리를 선택하십시오.
+5. "Install all CIAs" 옵션을 선택하고 (A) 버튼을 눌러 진행하십시오.
+6. (B) 버튼을 눌러 SD 디렉터리로 돌아가십시오.
+7. `arm9loaderhax.bin` 파일로 이동하고 (A) 버튼을 누른 뒤 "Copy" 옵션을 선택하십시오.
+8. (B) 버튼을 눌러 FBI 메인 메뉴로 돌아가십시오.
+9. "CTR NAND" 디렉터리를 선택하십시오.
+10. "\<current directory>" 디렉터리를 선택하십시오.
+11. "Paste" 옵션을 선택한 뒤 (A) 버튼을 눌러 진행하십시오.
+12. 홈 버튼을 눌러 빠져나오십시오.
+13. 홈 메뉴에 생긴 홈브류 런처를 실행하십시오.
+14. 홈브류 목록에서 DSP Dump를 실행하십시오.
+  + 이 옵션은 밑으로 내려야 보일 수도 있습니다.
+15. 종료 메시지가 나타나면 (Start) 버튼을 누르십시오.
+16. 홈브류 런처에서 (Start) 버튼을 눌러 홈브류 런처 종료 메뉴를 여십시오.
+17. (A) 버튼을 누른 뒤 (Start) 버튼을 누른 채 기기를 켜 Hourglass9을 여십시오.
+18. "SysNAND Backup/Restore", "Health&Safety Inject" 옵션을 차례로 선택하십시오.
+19. `hs.app` 파일(FBI를 담고 있지 않은 원본 파일)을 선택하고 (A) 버튼을 눌러 주입을 진행하십시오.
+20. 메인 메뉴에서 (Select) 버튼을 눌러 SD 카드를 빼내십시오.
+21. SD 카드가 제거된 상태에서 (Start) 버튼을 눌러 기기를 다시 시작하십시오.
+  + CTRNAND 기반의 Luma3DS를 구성하기 위하여 적어도 한 번은 SD 카드가 제거된 상태에서 기기를 켜십시오.
+22. (A) 버튼과 십자 버튼을 이용하여 다음 옵션을 켜십시오:    
   + **"Show NAND or user string in System Settings"**
-23. If you are using a **New 3DS**, you can *also* enable the following:
+23. **뉴 3DS**를 사용 중이라면 다음 옵션 *또한* 켜십시오:
   + **"New 3DS CPU" to "Clock+L2(x)"**
-    + This will increase the framerate of many games, but may cause instability in others
-    + If some games do not work properly, disable this option and try again
-    + **This breaks the Homebrew Launcher on 11.3!**
-24. SD 카드를 다시 3DS에 삽입하고 (Start) 버튼을 눌러 저장한 뒤 기기를 재시작하세요.
+    + 이 옵션은 많은 게임의 프레임을 향상시키지만, 일부 게임은 불안정해질 수 있습니다.
+    + 게임이 제대로 작동하지 않으면 이 옵션을 끄고 다시 시도해 보십시오.
+    + **이 옵션을 켜면 11.3 버전에서 홈브류 런처를 실행할 수 없습니다!**
+24. SD 카드를 다시 3DS에 삽입하고 (Start) 버튼을 눌러 저장한 뒤 기기를 다시 시작하십시오.
 
 ___
 
-DSi / DS 기능(DS 카트 또는 DSiWare 등)이 더이상 작동하지 않으면 [이 문제 해결 가이드](troubleshooting#twl_broken)를 참고하세요.
+DSi / DS 기능(DS 카트 또는 DSiWare 등)이 작동하지 않는다면 [이 문제 해결 가이드](troubleshooting#twl_broken)를 참고하십시오.
 {: .notice--warning}
 
 {% capture notice-10 %}
 이제 Luma3DS Updater를 열고 (A) 버튼을 누르기만 하면 Luma3DS를 최신 버전으로 업데이트할 수 있습니다.     
-이는 본체 업데이트와 다르며 오직 최신 버전의 Luma3DS 파일을 다운로드해서 압축을 풀어줍니다.
-이는 SD 카드에 저장된 Luma3DS 파일만 업데이트합니다. SD 카드가 제거된 상태에서 기기를 부팅시키면 CTRNAND에 있는 버전이 실행됩니다.    
+이는 본체 업데이트와 다르며, 최신 버전의 Luma3DS 파일을 다운로드하여 압축을 풀어주는 것 뿐입니다.  
+따라서 업데이트되는 것은 SD 카드에 저장된 Luma3DS 파일이 전부입니다. SD 카드가 제거된 상태에서 기기를 켜면 CTR NAND에 존재하는 버전의 Luma3DS가 실행됩니다.
 {% endcapture %}
 
 <div class="notice--info">{{ notice-10 | markdownify }}</div>
 
 {% capture notice-6 %}   
-기본적으로 커스텀 펌웨어 기반의 SysNAND로 부팅됩니다.    
-앞으로 (Select) 버튼을 누른 채 기기를 부팅시키면 Luma3DS 설정 메뉴가 실행됩니다.    
-앞으로 (Start) 버튼을 누른 채 기기를 부팅시키면 Hourglass9이 실행됩니다.     
+이제 기본적으로 커스텀 펌웨어 기반의 SysNAND로 부팅됩니다.    
+이제 (Select) 버튼을 누른 채 기기를 켜면 Luma3DS 구성 메뉴를 실행할 수 있습니다.    
+이제 (Start) 버튼을 누른 채 기기를 켜면 Hourglass9을 실행할 수 있습니다.     
 {% endcapture %}
 
 <div class="notice--info">{{ notice-6 | markdownify }}</div>
 
-추후에 arm9loaderhax를 업데이트 하고자 할 경우 [A9LH 업데이트](updating-a9lh) 페이지를 참고하세요.
+추후에 [A9LH 업데이트](updating-a9lh) 페이지의 지시 사항을 따르면 arm9loaderhax를 업데이트할 수 있습니다.
 {: .notice--info}
 
-[NTR CFW](https://github.com/44670/BootNTR/)를 사용하기 위해서는 [이 페이지](https://github.com/44670/BootNTR/releases)에서 알맞은 `.zip` 파일을 받아서 안의 `ntr.bin` 파일을 SD 카드의 최상위 경로에 복사하세요. 그리고 [이 페이지](https://github.com/astronautlevel2/BootNTR/releases/latest)에서 `BootNTR.cia` 파일을 다운로드하여 설치하면 됩니다.
+[NTR CFW](https://github.com/44670/BootNTR/)를 사용하려면 [이 페이지](https://github.com/44670/BootNTR/releases)에서 알맞은 `.zip` 파일을 다운로드하고 `.zip` 파일에서 `ntr.bin` 파일을 SD 카드의 최상위 경로에 복사하십시오. 그리고 [이 페이지](https://github.com/astronautlevel2/BootNTR/releases/latest)에서 `BootNTR.cia` 파일을 다운로드하여 설치하십시오.
 {: .notice--info}
 
-`NANDmin.bin` 파일은 보관해 두세요. 벽돌이 되었을 때 Hourglass9를 통해 이 파일을 복원하여 기기를 살릴 수 있습니다.
+`NANDmin.bin` 파일을 보관해 두십시오. 나중에 벽돌이 되었을 때 Hourglass9을 통해 이 파일을 복원하여 기기를 살릴 수 있습니다.
 {: .notice--info}
 
-백업한 NAND 파일을 안전한 장소에 복사해뒀다면 `/files9/` 폴더에서 NAND 백업을 삭제해도 됩니다.
+NAND 백업 파일을 안전한 위치에 복사했다면 `/files9/` 폴더에서 NAND 백업 파일을 제거해도 됩니다.
 {: .notice--info}
 
 {% capture notice-7 %}
-**다음 목록에 *명시되지 않는* 파일과 폴더는 SD 카드의 최상위 경로에서 삭제해도 됩니다:**
+**이제 SD 카드의 최상위 경로에서 다음 목록에 *없는* 파일들은 제거해도 됩니다:**
 
     + 3ds
     + files9
@@ -229,11 +230,11 @@ DSi / DS 기능(DS 카트 또는 DSiWare 등)이 더이상 작동하지 않으�
 
 <div class="notice--info">{{ notice-7 | markdownify }}</div>
 
-기기를 다른 지역으로 변경하는 방법에 대해 알아보려면 [지역 변경](region-changing) 페이지를 참고하세요.
+기기를 다른 지역으로 변경하는 방법에 대해 알아보려면 [지역 변경](region-changing) 페이지를 참고하십시오.
 {: .notice--success}
 
-설치한 A9LH를 최신 버전으로 유지하는 방법에 대해 알아보려면 [A9LH 업데이트](updating-a9lh) 페이지를 참고하세요.
+설치한 A9LH를 최신 버전으로 유지하는 방법에 대해 알아보려면 [A9LH 업데이트](updating-a9lh) 페이지를 참고하십시오.
 {: .notice--success}
 
-Luma3DS의 다양한 기능에 대해 알아보려면 [Luma3DS 위키](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)를 참고하세요.
+Luma3DS의 다양한 기능에 대해 알아보려면 [Luma3DS 위키](https://github.com/AuroraWright/Luma3DS/wiki/Options-and-usage)를 참고하십시오.
 {: .notice--success}

@@ -5,12 +5,12 @@ permalink: /ko_KR/donations.html
 layout: single-no-ads
 ---
 
-## 가이드가 도움이 되었기를 바라며 감사의 뜻으로 기부를 해주신다면 고맙게 받겠습니다.
+## 이 가이드가 도움이 되어 고맙다면 제게 기부를 하실 수 있습니다.
 {: .text-center}
 {: .notice--success}
 
-[![Bitcoin]({{ site.baseurl }}/images/donate_64.png)](https://www.coinbase.com/lilymaniac){: .align-center}
+[![비트코인]({{ site.baseurl }}/images/donate_64.png)](https://www.coinbase.com/lilymaniac){: .align-center}
 {: .text-center}
 
-[![Paypal]({{ site.baseurl }}/images/paypal.jpg)](https://www.paypal.me/plailect/15){: .align-center}
+[![페이팔]({{ site.baseurl }}/images/paypal.jpg)](https://www.paypal.me/plailect/15){: .align-center}
 {: .text-center}

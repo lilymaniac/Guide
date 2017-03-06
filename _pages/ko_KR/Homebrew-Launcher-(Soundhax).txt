@@ -1,5 +1,5 @@
 ---
-title: "Homebrew Launcher (Soundhax)" #
+title: "홈브류 런처 (사운드핵스)" #
 lang: ko
 permalink: /ko_KR/homebrew-launcher-(soundhax).html
 ---
@@ -7,30 +7,30 @@ permalink: /ko_KR/homebrew-launcher-(soundhax).html
 홈브류 런처는 다양한 방법을 통해 실행할 수 있습니다.
 {: .notice}
 
-Soundhax is compatible with versions 9.0.0 through 11.2.0 in the EUR, JPN, KOR, and USA regions.
+사운드핵스는 EUR, JPN, USA, KOR 지역의 9.0.0~11.2.0 버전 기기에서 사용할 수 있습니다.
 {: .notice--info}
 
 #### 준비물
 
 + 홈브류 [스타터 킷](http://smealum.github.io/ninjhax2/starter.zip)
-+ The latest release of [Soundhax](http://soundhax.com/) *(for your device and region)*
-+ [otherapp 페이로드](https://smealum.github.io/3ds/#otherapp) *(모델 및 지역에 맞게)*
++ 최신 버전의 [사운드핵스](http://soundhax.com/) *(기기 및 지역에 맞게)*
++ [otherapp 페이로드](https://smealum.github.io/3ds/#otherapp) *(기기 및 지역에 맞게)*
 
-#### 진행 방법
+#### 지시 사항
 
-1. `starter.zip` 파일 내 `starter` 폴더의 _내용물을_ SD 카드의 최상위 경로에 복사하세요.
-2. Copy the Soundhax `.m4a` to the root of your SD card
-3. otherapp 페이로드 파일을 SD 카드의 최상위 경로에 복사하고 이름을 `otherapp.bin`으로 변경하세요.
-4. SD 카드를 다시 3DS에 삽입하세요.
-5. 닌텐도 3DS 사운드 앱을 실행하세요.
-6. 새가 나오는 도움말을 모두 살펴본 뒤, 정상적으로 앱을 닫았다가 다시 여세요.
-  + Launching Soundhax immediately would cause these tips to appear on every launch of the Nintendo 3DS Sound until this is done
-7. Go to `/SDCARD`, then play "<3 nedwill 2016"
-  + This may take many tries
-  + 재생중 화면이 멈출 경우 전원 버튼을 길게 눌러서 기기를 강제로 종료시킨 후 재시도 하세요.
-8. 성공하면 홈브류 런처가 실행될 것입니다.
+1. `starter.zip` 파일 내 `starter` 폴더의 _내용물을_  SD 카드의 최상위 경로에 복사하십시오.
+2. 사운드핵스 `.m4a` 파일을 SD 카드의 최상위 경로에 복사하십시오.
+3. otherapp 페이로드 파일을 SD 카드의 최상위 경로에 복사하고 파일의 이름을 `otherapp.bin`으로 바꾸십시오.
+4. SD 카드를 다시 3DS에 삽입하십시오.
+5. 닌텐도 3DS 사운드를 실행하십시오.
+6. 새가 나오는 도움말을 모두 살펴본 뒤 정상적으로 앱을 닫고 다시 여십시오.
+  + 사운드핵스를 바로 실행하면 닌텐도 3DS 사운드를 실행할 때마다 도움말이 나타납니다.
+7. `/SD 카드`를 선택하고 "<3 nedwill 2016" 파일을 재생하십시오.
+  + 여러 번 시도해야 할 수 있습니다.
+  + 화면이 멈춘다면 전원 버튼을 길게 눌러 기기를 강제로 끈 다음 다시 시도하십시오.
+8. 성공하면 기기에 홈브류 런처가 켜질 것입니다.
 
 ___
 
-[Decrypt9 (홈브류 런처)](decrypt9-(homebrew-launcher))으로 이어집니다.
+[Decrypt9 (홈브류 런처)](decrypt9-(homebrew-launcher)) 페이지로 이어집니다.
 {: .notice--primary}
