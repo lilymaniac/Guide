@@ -1,7 +1,7 @@
 ---
 title: "NTR 및 Cubic Ninja" #
 lang: ko
-permalink: /ko_KR/ntr-and-cubic-ninja.html
+permalink: /ntr-and-cubic-ninja.html
 ---
 
 이 페이지의 [자석 주소](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하기 위해서는 [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.

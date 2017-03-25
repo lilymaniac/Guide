@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting" #
 lang: en
-permalink: /troubleshooting.html
+permalink: /en_US/troubleshooting.html
 ---
 
 If you are unable to boot your device, please look for the section relevant to you, and follow the instructions. Once a solution works for you, you can proceed on with the main guide

@@ -1,7 +1,7 @@
 ---
 title: "File Extensions (Windows)" #
 lang: en
-permalink: /file-extensions-(windows).html
+permalink: /en_US/file-extensions-(windows).html
 ---
 
 This is an add-on section for disabling Windows's default behavior of hiding file extensions.

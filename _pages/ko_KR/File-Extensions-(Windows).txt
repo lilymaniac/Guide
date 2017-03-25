@@ -1,7 +1,7 @@
 ---
 title: "파일 확장명 (Windows)" #
 lang: ko
-permalink: /ko_KR/file-extensions-(windows).html
+permalink: /file-extensions-(windows).html
 ---
 
 이 페이지는 Windows의 기본 옵션인 '파일 확장명 숨기기'를 비활성화하는 방법을 안내하는 부가 섹션입니다.

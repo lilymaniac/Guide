@@ -1,7 +1,7 @@
 ---
 title: "F3X (Mac)" #
 lang: ko
-permalink: /ko_KR/f3x-(mac).html
+permalink: /f3x-(mac).html
 ---
 
 이 페이지는 F3X를 사용하여 SD 카드의 오류를 확인하는 방법을 안내하는 부가 섹션입니다.

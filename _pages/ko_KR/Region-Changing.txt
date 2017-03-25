@@ -1,7 +1,7 @@
 ---
 title: "지역 변경" #
 lang: ko
-permalink: /ko_KR/region-changing.html
+permalink: /region-changing.html
 ---
 
 이 페이지는 arm9loaderhax 커스텀 펌웨어 SysNAND의 지역을 변경하는 방법을 안내하는 부가 섹션입니다. 이는 원하는 지역의 9.2.0 CTRTransfer 이미지를 설치하여 이루어집니다.

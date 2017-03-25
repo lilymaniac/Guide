@@ -1,7 +1,7 @@
 ---
 title: "SafeCTRTransfer (MSET)" #
 lang: ko
-permalink: /ko_KR/safectrtransfer-(mset).html
+permalink: /safectrtransfer-(mset).html
 ---
 
 이미 EmuNAND 기반 커스텀 펌웨어가 적용된 기기를 가지고 있는 경우, 이 가이드는 SysNAND를 기준으로 작성되었으므로 모든 지시 사항을 SysNAND에 적용해야 합니다. EmuNAND와 RedNAND라는 용어는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것이라는 점을 참고하십시오.

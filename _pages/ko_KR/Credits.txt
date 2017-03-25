@@ -1,7 +1,7 @@
 ---
 title: "기여자" #
 lang: ko
-permalink: /ko_KR/credits.html
+permalink: /credits.html
 ---
 
 **[Freenode #Cakey 채널](http://webchat.freenode.net/?channels=%23Cakey)의 모든 분들께 정말 감사드립니다!**

@@ -1,7 +1,7 @@
 ---
 title: "9.2.0 CTRTransfer" #
 lang: en
-permalink: /9.2.0-ctrtransfer.html
+permalink: /en_US/9.2.0-ctrtransfer.html
 ---
 
 Your device may not show your installed games after the CTRTransfer. This is due to the tickets being removed by the transfer, which is why you back them up. They will be restored at the end of the guide.

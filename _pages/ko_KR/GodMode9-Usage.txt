@@ -1,7 +1,7 @@
 ---
 title: "GodMode9 사용법" #
 lang: ko
-permalink: /ko_KR/godmode9-usage.html
+permalink: /godmode9-usage.html
 ---
 
 GodMode9은 닌텐도 3DS 기기 전체의 접근이 가능한 파일 브라우저로, SD 카드의 SysNAND/EmuNAND 속 FAT 파티션 및 다른 기본적인 항목에 접근할 수 있습니다. 그 밖에도 파일 복사, 삭제, 이름 바꾸기 및 폴더 만들기 등의 기능 또한 가지고 있습니다.

@@ -1,7 +1,7 @@
 ---
 title: "H2testw (Windows)" #
 lang: ko
-permalink: /ko_KR/h2testw-(windows).html
+permalink: /h2testw-(windows).html
 ---
 
 이 페이지는 h2testw를 사용하여 SD 카드의 오류를 확인하는 방법을 안내하는 부가 섹션입니다.

@@ -1,7 +1,7 @@
 ---
 title: "[PSA] 최근 일어난 커뮤니티의 사건사고" #
 lang: ko
-permalink: /ko_KR/recent-community-events.html
+permalink: /recent-community-events.html
 ---
 
 {% capture notice-1 %}

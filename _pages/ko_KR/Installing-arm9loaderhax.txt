@@ -1,7 +1,7 @@
 ---
 title: "arm9loaderhax 설치" #
 lang: ko
-permalink: /ko_KR/installing-arm9loaderhax.html
+permalink: /installing-arm9loaderhax.html
 ---
 
 이 가이드의 마지막 단계는 [AuroraWright](https://github.com/AuroraWright/)의 SafeA9LHInstaller로 arm9loaderhax를 설치하여 기기를 켜는 즉시 Luma3DS가 실행되도록 설정하는 것입니다.

@@ -6,7 +6,7 @@
           {% assign split_path = page.path | split: "/" %}
           {% assign locale = split_path[1] %}
           {% assign titles = site.data.navigation[locale].main %}
-          {% if locale == 'en_US' %}
+          {% if locale == 'ko_KR' %}
             {% assign locale_var = '/' %}
           {% else %}
             {% assign locale_var = locale | prepend:'/' | append:'/' %}
@@ -29,8 +29,8 @@
           {% else %}
             {% assign langless_url = split_url[1] %}
           {% endif %}
-          <li class="masthead__menu-item"><a href="{{ site.baseurl }}/{{ langless_url }}">English</a></li>
-          <li class="masthead__menu-item"><a href="{{ site.baseurl }}/ko_KR/{{ langless_url }}">한국어</a></li>
+          <li class="masthead__menu-item"><a href="{{ site.baseurl }}/{{ langless_url }}">한국어</a></li>
+          <li class="masthead__menu-item"><a href="{{ site.baseurl }}/en_US/{{ langless_url }}">English</a></li>
         </ul>
         <button class="lang-selector"><div class="langicon"><i class="fa fa-language fa-lg" aria-hidden="true"></i></div></button>
         <button class="nav-selector" id="toggle-nav"><div class="navicon"></div></button>

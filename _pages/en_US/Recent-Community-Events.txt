@@ -1,7 +1,7 @@
 ---
 title: "[PSA] Recent Community Events" #
 lang: en
-permalink: /recent-community-events.html
+permalink: /en_US/recent-community-events.html
 ---
 
 {% capture notice-1 %}
