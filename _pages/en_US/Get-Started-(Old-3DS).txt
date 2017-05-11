@@ -35,7 +35,7 @@ If you updated with a game cart containing the version 9.9.0 or above *(meaning 
 Your device version can be found at the bottom right of the top screen of the System Settings.
 {: .notice--success}
 
-![]({{ base_path }}/images/screenshots/system-version.png)
+![]({{ site.baseurl }}/images/screenshots/system-version.png)
 {: .notice--info}
 
 <table>

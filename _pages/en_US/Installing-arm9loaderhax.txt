@@ -79,7 +79,7 @@ During this process, we also setup programs such as the following:
 1. Copy `DSP1.cia` to the `/cias/` folder on your SD card
 1. Copy `Themely.cia` to the `/cias/` folder on your SD card
 
-    ![]({{ base_path }}/images/screenshots/cias-file-layout.png)
+    ![]({{ site.baseurl }}/images/screenshots/cias-file-layout.png)
     {: .notice--info}
 
 1. Copy `arm9loaderhax.bin` from the Luma3DS `.7z` to the root of your SD card, overwrite existing files
@@ -94,7 +94,7 @@ During this process, we also setup programs such as the following:
   + **KOR:** `OLD-11-4-0-37-KOR.bin`
   + **USA:** `OLD-11-4-0-37-USA.bin`
 
-    ![]({{ base_path }}/images/screenshots/install-a9lh-file-layout.png)
+    ![]({{ site.baseurl }}/images/screenshots/install-a9lh-file-layout.png)
     {: .notice--info}
 
 ##### Section II - Installing arm9loaderhax
@@ -238,7 +238,7 @@ Keep your `<serialnumber>_nand.bin` file, it can be restored by GodMode9 to save
 {% capture notice-7 %}
 Remove any extra files and folders from the root of your SD card that are *not* in the following image:
 <br><br>
-![]({{ base_path }}/images/screenshots/final-file-layout.png)
+![]({{ site.baseurl }}/images/screenshots/final-file-layout.png)
 {% endcapture %}
 
 <div class="notice--info">{{ notice-7 | markdownify }}</div>

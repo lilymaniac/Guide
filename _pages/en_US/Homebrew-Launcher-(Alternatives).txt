@@ -23,7 +23,7 @@ Ensure your device's Wireless Communication is turned on as udsploit (used in th
 1. Insert your SD card into your computer
 1. Copy _the contents of_ the `starter.zip` to the root of your SD card
 
-    ![]({{ base_path }}/images/screenshots/hb-alt-file-layout.png)
+    ![]({{ site.baseurl }}/images/screenshots/hb-alt-file-layout.png)
     {: .notice--info}
     
 1. Reinsert your SD card into your device
@@ -45,23 +45,9 @@ Ensure your device's Wireless Communication is turned on as udsploit (used in th
     | <sub>[GenHax](https://github.com/svanheulen/genhax_proxy_installer) | <sub>[*Monster Hunter X*](http://amzn.to/2gsk6Tk) | <sub>eShop | <sub>New | <sub>JPN | <sub>All | <sub>9.9.0-X up to and including 11.2.0-X |
     {: .notice--info}
 
-    <script type="text/javascript">
-    amzn_assoc_placement = "adunit0";
-    amzn_assoc_tracking_id = "plailect-20";
-    amzn_assoc_ad_mode = "manual";
-    amzn_assoc_ad_type = "smart";
-    amzn_assoc_marketplace = "amazon";
-    amzn_assoc_region = "US";
-    amzn_assoc_title = "";
-    amzn_assoc_linkid = "718ad647bc3d1b8f8c44b3a1f34bc235";
-    amzn_assoc_search_bar = "false";
-    amzn_assoc_asins = "B01AC3ZDCE,B00DD0B1R0,B00YC7DZP4,B00IVJ1M7M,B008YYSBR8,B004SG211I,B00KI2OZ9M,B00K848IH0";
-    </script>
-    <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-
 1. Your device should load the Homebrew Launcher
 
-    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    ![]({{ site.baseurl }}/images/screenshots/homebrew-launcher.png)
     {: .notice--info}
 
 Continue to [SafeCTRTransfer (Homebrew Launcher)](safectrtransfer-(homebrew-launcher))

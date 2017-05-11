@@ -9,12 +9,11 @@
 locale                   : "en-US"
 title                    : "3DS Guide"
 title_separator          : "-"
-name                     : "Plailect"
+name                     : "lilymaniac"
 description              : "Full arm9loaderhax CFW Guide"
-url                      : "https://3ds.guide" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-enforce_ssl              : "3ds.guide"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "Plailect/Guide" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : "https://lilymaniac.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/Guide" # the subpath of your site, e.g. "/blog"
+repository               : "lilymaniac/Guide" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
@@ -49,8 +48,8 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification : IzU3K8_0o_n4KY_o0Azr6DK7M4aRlZMzrWKr4iyXyrs
-bing_site_verification   : F3532011519E308583A0A2CAF2DD69E8
+google_site_verification :
+bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
@@ -71,18 +70,18 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "UA-86465881-1"
+    tracking_id          :
 
 
 # Site Author
 author:
-  name             : "Plailect"
-  avatar           : "bio-photo.png"
-  bio              : "3DS Hacker"
-  location         : "Nullsec"
-  email            : "Plailect@gmail.com"
+  name             : "lilymaniac"
+  avatar           :
+  bio              :
+  location         :
+  email            : "lilymaniac@outlook.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -90,18 +89,18 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "Plailect"
+  github           : "lilymaniac"
   google_plus      :
   keybase          :
   instagram        :
-  lastfm           : "Plailect"
+  lastfm           :
   linkedin         :
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
-  twitter          : "Plailect"
+  twitter          :
   vine             :
   weibo            :
   xing             :
@@ -136,41 +135,7 @@ exclude: [
   Rakefile,
   README,
   tmp,
-  _pages/af_ZA,
-  _pages/ar_SA,
-  _pages/ca_ES,
-  _pages/cs_CZ,
-  _pages/da_DK,
-  # _pages/de_DE,
-  _pages/el_GR,
-  _pages/en_PT,
   # _pages/en_US,
-  _pages/es_EM,
-  # _pages/es_ES,
-  # _pages/fi_FI,
-  # _pages/fr_FR,
-  # _pages/he_IL,
-  _pages/hu_HU,
-  _pages/id_ID,
-  # _pages/it_IT,
-  _pages/ja_JP,
-  _pages/ko_KR,
-  _pages/ms_MY,
-  _pages/no_NO,
-  _pages/nl_NL,
-  _pages/pl_PL,
-  # _pages/pt_BR,
-  _pages/pt_PT,
-  _pages/ro_RO,
-  # _pages/ru_RU,
-  _pages/sr_SP,
-  _pages/sv_SE,
-  _pages/th_TH,
-  _pages/tr_TR,
-  _pages/uk_UA,
-  _pages/vi_VN,
-  _pages/zh_CN,
-  _pages/zh_TW,
 ]
 
 keep_files:
