@@ -1,0 +1,63 @@
+---
+title: "F3 (Linux)" #
+lang: ko
+permalink: /ko_KR/f3-(linux).html
+---
+
+이 페이지는 F3를 사용하여 SD 카드의 오류를 확인하는 방법을 안내하는 부가 섹션입니다.
+{: .notice}
+
+이 과정은 SD 카드의 크기와 컴퓨터의 속도에 따라 최대 몇 시간이 걸릴 수도 있습니다!
+{: .notice--info}
+
+이 페이지는 Linux 사용자를 위한 페이지입니다. Linux 사용자가 아니라면 [H2testw (Windows)](h2testw-(windows)) 또는 [F3X (mac)](f3x-(mac)) 페이지를 참고하십시오.
+{: .notice--info}
+
+#### 준비물
+
+* 최신 버전의 [F3](https://github.com/AltraMayor/f3/archive/v6.0.zip)
+
+#### 지시 사항
+
+1. f3 `.zip` 파일의 압축을 푸십시오.
+1. f3 디렉터리로 `cd` 하십시오.
+1. `make` 커맨드를 실행하여 F3를 컴파일하십시오.
+1. SD 카드를 컴퓨터에 삽입하십시오.
+1. SD 카드를 마운트하십시오.
+1. `./f3write <SD 카드 마운트 포인트>` 커맨드를 실행하십시오.
+1. 과정이 완료될 때까지 기다리십시오. 예시 결과는 아래를 참조하십시오.
+
+		$ ./f3write /media/michel/6135-3363/
+		Free space: 29.71 GB
+		Creating file 1.h2w ... OK!
+		...
+		Creating file 30.h2w ... OK!
+		Free space: 0.00 Byte
+		Average Writing speed: 4.90 MB/s
+
+1. `./f3read <SD 카드 마운트 포인트>` 커맨드를 실행하십시오.
+1. 과정이 완료될 때까지 기다리십시오. 예시 결과는 아래를 참조하십시오.
+
+		$ ./f3read /media/michel/6135-3363/
+		                  SECTORS      ok/corrupted/changed/overwritten
+		Validating file 1.h2w ... 2097152/        0/      0/      0
+		...
+		Validating file 30.h2w ... 1491904/        0/      0/      0
+
+		  Data OK: 29.71 GB (62309312 sectors)
+		Data LOST: 0.00 Byte (0 sectors)
+			       Corrupted: 0.00 Byte (0 sectors)
+			Slightly changed: 0.00 Byte (0 sectors)
+			     Overwritten: 0.00 Byte (0 sectors)
+		Average Reading speed: 9.42 MB/s
+
+___
+
+테스트에서 `Data LOST: 0.00 Byte (0 sectors)`와 같은 결과가 나올 경우 SD 카드가 정상이라는 의미이며 SD 카드의 모든 `.h2w` 파일을 삭제해도 됩니다.
+{: .notice--success}
+
+다른 결과가 나올 경우 SD 카드가 손상되었을 가능성이 있으므로 SD 카드를 교체해야 할 수 있습니다!
+{: .notice--danger}
+
+[시작하기](get-started) 페이지로 돌아갑니다.
+{: .notice--primary}

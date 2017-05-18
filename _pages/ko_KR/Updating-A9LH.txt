@@ -1,0 +1,98 @@
+---
+title: "A9LH 업데이트" #
+lang: ko
+permalink: /ko_KR/updating-a9lh.html
+---
+
+### 마지막 업데이트: 2016년 11월 3일
+
+arm9loaderhax의 본체는 마더보드에 납땜되어 있는 NAND 칩의 NFIRM 파티션에 설치된 페이로드 파일입니다. 이 페이로드 파일들은 매우 드물게 업데이트되며 SD 카드에서 `arm9loaderhax.bin` 파일을 실행하는 역할만 담당합니다. 이 가이드의 경우 Luma3DS를 실행하게 됩니다.
+{: .notice}
+
+현재 사용 중인 arm9loaderhax가 무슨 버전인지 잘 모르겠다면 그냥 이 페이지를 통하여 최신 버전을 설치하십시오. 최신 버전이 설치된 상태에서 다시 최신 버전을 설치하는 것은 아무런 영향을 주지 않습니다.
+{: .notice--info}
+
+Luma3DS에 PIN이 설정되어 있다면 이 페이지를 진행하는 동안 PIN을 잠시 꺼 두십시오. 업데이트 이후에 PIN을 다시 활성화할 수 있습니다.
+{: .notice--info}
+
+화면을 자체적으로 띄우지 않는 페이로드(Bootanim9 등)를 사용할 경우 파일의 이름을 `arm9loaderhax.bin`에서 `arm9loaderhax_si.bin`으로 바꾸어 사용해야 합니다.
+{: .notice--info}
+
+data_input의 버전은 다른 인스톨러와 호환되는 `.zip` 파일의 개정판임을 의미하는 것일 뿐이며, A9LH 자체(페이로드 파일들)를 업데이트하는 것과는 *다릅니다*. 설치 과정에서 실질적인 차이점은 없습니다.
+{: .notice--info}
+
+**이 페이지의 [자석 주소](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하기 위해서는 [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.**
+{: .notice--info}
+
+이 페이지는 다양한 페이로드와 AES 키 데이터베이스도 함께 업데이트합니다.
+{: .notice--success}
+
+#### 준비물
+
+* <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [`aeskeydb.bin`](magnet:?xt=urn:btih:18b3a17f78e2376e05feaa150749d9fd689b25dc&dn=aeskeydb.bin&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* <i class="fa fa-magnet" aria-hidden="true" title="이 링크는 자석 주소입니다. 토렌트 클라이언트를 사용하여 파일을 다운로드하십시오."></i> - [`data_input_v4.zip`](magnet:?xt=urn:btih:00f03ff69b5961307303d5e4778a2f65a528bf2d&dn=data%5Finput%5Fv4.zip&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fzer0day.ch%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=http%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=http%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=http%3A%2F%2Ftracker1.wasabii.com.tw%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.baravik.org%3A6970%2Fannounce&tr=http%3A%2F%2Ftracker.tfile.me%2Fannounce&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Ftracker.yoshi210.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.filetracker.pl%3A8089%2Fannounce)
+* 최신 버전의 [SafeA9LHInstaller](https://github.com/AuroraWright/SafeA9LHInstaller/releases/latest) *(`.7z` 파일)*
+* 최신 버전의 [arm9loaderhax](https://github.com/AuroraWright/arm9loaderhax/releases/latest) *(`release.7z` 파일)*
+* 최신 버전의 [GodMode9](https://github.com/d0k3/GodMode9/releases/latest)
+
+#### 지시 사항
+
+**이 페이지의 모든 지시 사항에서 SD 카드에 동일한 파일이 있으면 모두 덮어씌우십시오.**
+{: .notice--info}
+
+##### 섹션 I - 준비 작업
+
+1. 기기의 전원을 끄십시오.
+1. SD 카드를 컴퓨터에 삽입하십시오.
+1. SD 카드의 최상위 경로에 `aeskeydb.bin` 파일이 있으면 파일을 삭제하십시오.
+1. SD 카드의 최상위 경로에 `a9lh` 폴더가 있으면 폴더를 삭제하십시오.
+1. `aeskeydb.bin` 파일을 SD 카드의 `/files9/` 폴더에 복사하십시오.
+1. GodMode9 `.zip` 파일에서 `GodMode9.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하십시오.
+  + `GodMode9.bin` 파일이 폴더에 이미 있으면 원래 있던 `GodMode9.bin` 파일을 삭제하고 새 파일로 교체하십시오.
+1. SafeA9LHInstaller `.zip` 파일에서 `arm9loaderhax.bin` 파일을 SD 카드의 `/luma/payloads/` 폴더에 복사하십시오.
+1. `/luma/payloads/` 폴더에서 `arm9loaderhax.bin` 파일의 이름을 `safea9lhinstaller.bin`으로 바꾸십시오.
+1. data_input `.zip` 파일에서 `a9lh` 폴더를 SD 카드의 최상위 경로에 복사하십시오.
+1. arm9loaderhax `release.7z` 파일의 *내용물을* SD 카드의 `a9lh` 폴더에 복사하십시오.
+1. SD 카드를 다시 기기에 삽입하십시오.
+
+##### 섹션 II - 페이로드 업데이트
+
+1. (Start) 버튼을 누른 채 기기를 켜 Luma3DS 체인로더 메뉴를 실행하십시오.
+1. (A) 버튼을 눌러 SafeA9LHInstaller를 실행하십시오.
+1. (Select) 버튼을 눌러 arm9loaderhax를 업데이트하십시오.
+1. 기기의 전원을 끄십시오.
+1. SD 카드를 컴퓨터에 삽입하십시오.
+1. SD 카드의 최상위 경로에서 `a9lh` 폴더를 삭제하십시오.
+1. `/luma/payloads/` 폴더에서 `safea9lhinstaller.bin` 파일을 삭제하십시오.
+1. SD 카드를 다시 기기에 삽입하십시오.
+
+##### 섹션 III - Luma3DS 환경 설정
+
+1. (Select) 버튼을 누른 채 기기를 켜 Luma3DS 환경 설정 메뉴로 진입하십시오.
+1. (A) 버튼과 십자 버튼을 이용하여 다음 옵션을 켜십시오:  
+  + **"Autoboot SysNAND"**
+  + **"Use SysNAND FIRM if booting with R"**
+  + **"Show NAND or user string in System Settings"**
+1. (Start) 버튼을 눌러 설정을 저장하고 기기를 다시 시작하십시오.
+
+##### 섹션 IV - CTRNAND Luma3DS
+
+1. 기기를 다시 시작하는 도중 (Start) 버튼을 누른 채 기기를 켜 Luma3DS 체인로더 메뉴를 실행하십시오.
+1. (A) 버튼을 눌러 GodMode9을 실행하십시오.
+1. `[0:] SDCARD` 디렉터리로 이동하십시오.
+1. `arm9loaderhax.bin` 파일에서 (Y) 버튼을 눌러 파일을 복사하십시오.
+1. (B) 버튼을 눌러 메인 메뉴로 돌아가십시오.
+1. `[1:] SYSNAND CTRNAND` 디렉터리로 이동하십시오.
+1. (Y) 버튼을 눌러 `arm9loaderhax.bin` 파일을 붙여넣으십시오.
+1. "Copy path(s)" 항목을 선택하십시오.
+  + 메시지가 나타나면 `arm9loaderhax.bin` 파일을 덮어씌우십시오.
+1. (A) 버튼을 눌러 SysNAND (lvl1) 쓰기 잠금을 풀고 주어진 키 조합을 입력하십시오.
+1. (B) 버튼을 눌러 메인 메뉴로 돌아가십시오.
+1. (R) 버튼과 (B) 버튼을 동시에 눌러 기기에서 SD 카드를 빼내십시오.
+1. 기기에서 SD 카드를 빼내십시오.
+1. SD 카드를 빼둔 상태에서 (Start) 버튼을 눌러 기기를 다시 시작하십시오.
+  + CTRNAND 기반의 Luma3DS 환경을 구성하기 위하여 적어도 한 번은 SD 카드를 제거한 상태에서 기기를 켜십시오.
+1. (A) 버튼과 십자 버튼을 이용하여 다음 옵션을 켜십시오:  
+  + **"Show NAND or user string in System Settings"**
+1. SD 카드를 다시 기기에 삽입하십시오.
+1. (Start) 버튼을 눌러 설정을 저장하고 기기를 다시 시작하십시오.

@@ -1,0 +1,67 @@
+---
+title: "홈브류 런처 (사운드핵스)" #
+lang: ko
+permalink: /ko_KR/homebrew-launcher-(soundhax).html
+---
+
+홈브류 런처는 다양한 방법을 통해 실행할 수 있습니다.
+{: .notice}
+
+사운드핵스는 9.0.0~11.3.0 버전의  유럽, 일본, 한국, 북미판 기기에서 사용할 수 있습니다.
+{: .notice--info}
+
+다음 페이지에서 사용할 udsploit은 무선 모듈이 켜져 있어야 사용할 수 있습니다. 또한 몇몇 기기(뉴 3DS 및 2DS)에서는 홈브류 런처에서 무선 인터넷 연결 설정을 바꿀 수 없으므로 무선 인터넷 연결이 켜져 있는지 지금 확인하십시오. 켜져 있기만 하면 됩니다. 액세스 포인트에 연결되어 있을 필요는 없습니다.
+{: .notice--info}
+
+{% capture notice-1 %}
+
+게임 팩을 통한 업데이트는 본체 설정, 홈 메뉴 등의 주요 기능만 업데이트합니다. 닌텐도 3DS 사운드나 데이터 이사, 인터넷 브라우저, StreetPass Mii Plaza, e숍 등의 네트워크 기능은 업데이트하지 않습니다.
+<br><br>
+이는 곧 '낮은 버전의 닌텐도 3DS 사운드 앱'이 포함된 버전 *(7.0.0 미만의 유럽, 일본, 한국, 북미판 구 3DS)* 에서는 게임 팩을 통해 업데이트를 하여도 [사운드핵스](homebrew-launcher-(soundhax))를 사용할 수 없다는 것을 의미합니다! 이 상태에서 홈브류 런처에 진입하기 위해서는 [다른 방법](homebrew-launcher-(alternatives))을 사용해야 합니다!
+{% endcapture %}
+
+<div class="notice--warning">{{ notice-1 | markdownify }}</div>
+
+#### 준비물
+
+* 홈브류 [스타터 킷](http://smealum.github.io/ninjhax2/starter.zip)
+* 최신 버전의 [사운드핵스](http://soundhax.com/) *(기기 종류 및 지역에 맞게)*
+* [otherapp 페이로드](https://smealum.github.io/3ds/#otherapp) *(기기 종류 및 지역에 맞게)*
+
+#### 지시 사항
+
+1. 기기의 전원을 끄십시오.
+1. SD 카드를 컴퓨터에 삽입하십시오.
+1. `starter.zip` 파일에서 `starter` 폴더의 *내용물을* SD 카드의 최상위 경로에 복사하십시오.
+1. 사운드핵스 `.m4a` 파일을 SD 카드의 최상위 경로에 복사하십시오.
+1. otherapp 페이로드 파일을 SD 카드의 최상위 경로에 복사하고 파일의 이름을 `otherapp.bin`으로 바꾸십시오.
+
+    ![]({{ site.baseurl }}/images/screenshots/soundhax-file-layout.png)
+    {: .notice--info}
+
+1. SD 카드를 다시 기기에 삽입하십시오.
+1. 기기의 전원을 켜십시오.
+1. 닌텐도 3DS 사운드를 실행하십시오.
+
+    ![]({{ site.baseurl }}/images/screenshots/soundhax-welcome.png)
+    {: .notice--info}
+
+1. 닌텐도 3DS 사운드를 처음 실행하는 경우 새가 나오는 도움말을 모두 살펴본 뒤 정상적으로 앱을 닫고 다시 실행하십시오.
+  + 이 상황에서 사운드핵스를 바로 실행하면 닌텐도 3DS 사운드를 실행할 때마다 도움말이 나타납니다.
+1. `/SD 카드`를 선택하고 "<3 nedwill 2016" 파일을 재생하십시오.
+  + 여러 번 시도해야 할 수 있습니다.
+  + 화면이 멈춘 경우 전원 버튼을 길게 눌러 기기를 강제로 끈 다음 다시 시도하십시오.
+  + 붉은 화면이 나타난다면 `starter` 폴더의 *내용물을* SD 카드의 최상위 경로에 복사했는지 확인하십시오.
+
+    ![]({{ site.baseurl }}/images/screenshots/soundhax-launch.png)
+    {: .notice--info}
+
+1. 성공하면 기기에 홈브류 런처가 켜질 것입니다.
+
+    ![]({{ site.baseurl }}/images/screenshots/homebrew-launcher.png)
+    {: .notice--info}
+
+___
+
+[SafeCTRTransfer (홈브류 런처)](safectrtransfer-(homebrew-launcher)) 페이지로 이어집니다.
+{: .notice--primary}

@@ -1,0 +1,47 @@
+---
+title: "[PSA] 최근 일어난 커뮤니티의 사건사고" #
+lang: ko
+permalink: /ko_KR/recent-community-events.html
+---
+
+{% capture notice-1 %}
+
+동부 표준시로 2017년 4월 24일 약 오후 5시에 인기있는 서브레딧 /r/3dshacks의 관리자들([s_99](https://www.reddit.com/user/Seamus9999), [LOCAP](https://www.reddit.com/user/deadfracture99), [Clozure](https://www.reddit.com/user/34895348573857348759))이 3DS, Wii U 및 스위치 해킹 커뮤니티에 아동 성범죄를 저지른 자를 폭로한 게시물을 검열(블라인드)했습니다.
+<br><br>
+[많은 논쟁 끝에 스태프의 승인을 받아 올라온](https://0bin.net/paste/qK1vWjClOqWFYOSJ#Ba53hgBZMDzJPVWUbJ9e5w139KS2i4daFc7cyQYR+bi) 이 게시물은 80%의 upvote 비율로 총 417점을 얻었으며, 이는 분명 커뮤니티의 지지를 받아 얻은 점수입니다. 개발자 한 명의 무모한 게시물이 아니었으며 다양한 개발자 그룹 스태프들의 지원을 받은 게시물이었습니다.
+<br><br>
+해당 관리자들은 커뮤니티를 안전하게 지킬 의무가 있음에도 문제를 은폐하려는 시도를 했습니다. [스태프 중 일부는 이 사건이 커뮤니티에 아예 노출되지 않기를 원했습니다](https://0bin.net/paste/eBQtFS1iI-oUZ+Hi#LnzRA87qPu-r+3YfuVsSuBpQqtbgRznW3aWuls+XWJr). 이번 검열로 인해 저는 운영진의 변화가 있을 때까지 /r/3dshacks 서브레딧이나 IRC와의 인연을 끊을 것입니다.
+<br><br>
+본 사건에 대한 설명과 추가 정보 및 증거는 아래에서 확인하실 수 있습니다. 제거된 스레드의 아카이브 전체는 [*여기*](https://imgur.com/gallery/un69v)에서 확인하실 수 있습니다. 지금은 제거된 원본 스레드는 [*여기*](https://www.reddit.com/r/3dshacks/comments/674ik7/)에서 확인하실 수 있습니다.
+<br><br>
+저는 관리자 [dubyadud](https://www.reddit.com/user/dubyadud)에게 공식적으로 사죄의 말씀을 드리고 싶습니다. 저는 당신의 정당한 사과를 관리자 팀을 보호하려는 것으로 오해했습니다. 이 중요한 토론 게시물을 삭제하는 것에 저는 배신감을 느꼈고, 모든 관리자들이 한통속이라고 생각했었습니다.
+<br><br>
+아니, 이 가이드는 삭제하지 않겠습니다. 이 공지는 때가 되면 지울 겁니다. 이 사건은 증거가 있는 이상 '마녀사냥'이 아닙니다.
+      
+{% endcapture %}
+
+<div class="notice--danger">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-2 %}
+
+저는 이 글의 원본에서는 피해자의 신원을 직접 밝힐 수 있는 내용은 언급을 피했습니다. 하지만 안타깝게도 그들은 원본 스레드([이 아카이브](https://imgur.com/gallery/un69v)에서 확인 가능)에 직접 답글을 달고는 이러한 노력을 무의미하게 만들었습니다.
+<br><br>
+피해자의 사생활 보호 여부가 더 이상 선택 사항이 아니기에, Dazzozo에 대항하는 주장을 뒷받침하는 증거를 [여기](https://0bin.net/paste/n-tGGoZUNr8iKDpu#JnORnwh6Cdfd9S8hJp3wWLxUnmJt7HQxV0DsjdOz45L), [여기](https://gist.github.com/daeken/d2540e3fc355b5648442eb190dd8de84), [여기](https://imgur.com/gallery/4Y35B) 그리고 [여기](https://web.archive.org/web/20080312220606/http://dazzozo.com/profile.php?lookup=1) (나이가 나와 있음, [미러](https://imgur.com/gallery/NtyOJ))에서 확인하실 수 있습니다.
+{% endcapture %}
+
+<div class="notice--info">{{ notice-2 | markdownify }}</div>
+
+{% capture notice-3 %}
+
+저는 이 글을 쓰고 싶지 않았습니다. 하지만 이는 커뮤니티 전체의 안전을 위해 중요한 일입니다.
+<br><br>
+약 3주 전인 4월 2일자의 노골적인 대화 로그가 강력한 증거로 떠올랐는데, 3DS, Wii U 및 스위치 해킹 커뮤니티 멤버인 22세 [Dazzozo](https://dazzozo.com/) ([Github](https://github.com/Dazzozo))가 한 미성년자와 장거리에서 성적인 관계를 가졌다는 내용입니다. 좀 더 구체적으로 그는 이 미성년자와 성관계를 맺기 위한 출국을 의도했는데, 이는 분명 관련 [성관광법](http://www.legislation.gov.uk/ukpga/2003/42/section/15)을 위반하려는 것이었습니다. Dazzozo는 이 행동을 부정하려는 시도를 하지 않았고, 대신 성관광법이 적용된다는 것을 모르고 있었다고 말했습니다. 그는 그 후 이 상황이 발생한 장소로부터 퇴출 및 접근 금지를 당했으며 모든 정보가 관련 당국에 제출되었습니다.
+<br><br>
+3DS 해킹 커뮤니티에 이런 일이 처음 일어난 것은 아닙니다. 최근에 커뮤니티에서 유명한 개발자인 Cruel\`이 아동 음란물 혐의로 유죄 판결을 받았고 결과적으로 [20년의 징역](http://www.gwinnettdailypost.com/local/gwinnett-man-convicted-of-running-child-porn-site/article_05ad133f-165f-5afe-9714-92fc4445ead1.html)을 살게 되었습니다.
+<br><br>
+이러한 류의 성범죄 행동은 변호의 여지가 없으며, 성인과 15세 사이에 커다란 힘의 불균형이 있는 상황에서는 그 어떠한 형태의 건전한 관계로도 발전될 수 없다는 점을 분명히 하고 싶습니다. 이러한 유형의 [차일드 그루밍](https://en.wikipedia.org/wiki/Child_grooming) 행동은 상대 미성년자에게 아주 큰 피해를 입히게 됩니다. 이들은 친구들 사이에서 자신을 고립시키고 스스로의 성격을 어른과 일치하게 바꾸려 하는 경향이 있습니다 (이번 상황에서도 정확히 그런 일이 벌어졌습니다).  이 커뮤니티에는 차일드 그루밍의 위험성을 충분히 이해하지 못하는 어린 회원들이 많으며, 그들을 안전하게 지키는 것은 우리의 책임입니다.
+<br><br>
+이번 경우와 같이 성인과 미성년자가 함께 연루된 건전하지 못한 관계를 알고 있다면, 그들 스스로가 이 관계가 해롭다는 것을 아직 인지하지 못했더라도, 우리는 커뮤니티 회원으로서 앞에 나서서 해당 미성년자를 보호해야 할 책임이 있습니다.
+{% endcapture %}
+
+<div class="notice--primary">{{ notice-3 | markdownify }}</div>
