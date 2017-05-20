@@ -6,11 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en-US"
-title                    : "3DS Guide"
+locale                   : "ko-KR"
+title                    : "3DS 가이드"
 title_separator          : "-"
 name                     : "lilymaniac"
-description              : "Full sighax CFW Guide"
+description              : "sighax 커스텀 펌웨어 완벽 가이드"
 url                      : "https://lilymaniac.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/Guide" # the subpath of your site, e.g. "/blog"
 repository               : "lilymaniac/Guide" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -239,21 +239,21 @@ defaults:
       path: "_pages/en_US"
       type: pages
     values:
-      permalink: /:basename:output_ext
+      permalink: /en_US/:basename:output_ext
       lang: en
   - scope:
       path: "_pages/ko_KR"
       type: pages
     values:
-      permalink: /ko_KR/:basename:output_ext
+      permalink: /:basename:output_ext
       lang: ko
   - scope:
       path: "_pages/en_US/home.txt"
       type: pages
     values:
-      permalink: /index:output_ext
+      permalink: /en_US/index:output_ext
   - scope:
       path: "_pages/ko_KR/home.txt"
       type: pages
     values:
-      permalink: /ko_KR/index:output_ext
+      permalink: /index:output_ext
