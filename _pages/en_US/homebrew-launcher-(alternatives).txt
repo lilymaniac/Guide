@@ -21,7 +21,7 @@ Ensure your device's Wireless Communication is turned on as udsploit (used in th
 1. Insert your SD card into your computer
 1. Copy _the contents of_ the `starter.zip` to the root of your SD card
 
-    ![]({{ base_path }}/images/screenshots/hb-alt-file-layout.png)
+    ![]({{ site.baseurl }}/images/screenshots/hb-alt-file-layout.png)
     {: .notice--info}
     
 1. Reinsert your SD card into your device
@@ -59,7 +59,7 @@ Ensure your device's Wireless Communication is turned on as udsploit (used in th
 
 1. Your device should load the Homebrew Launcher
 
-    ![]({{ base_path }}/images/screenshots/homebrew-launcher.png)
+    ![]({{ site.baseurl }}/images/screenshots/homebrew-launcher.png)
     {: .notice--info}
 
 Continue to [Installing boot9strap (Homebrew Launcher)](installing-boot9strap-(homebrew-launcher))

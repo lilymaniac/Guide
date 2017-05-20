@@ -11,17 +11,7 @@ header:
 excerpt: "A complete guide to 3DS custom firmware, <br /> from stock to boot9strap.<br />"
 ---
 
-{% capture notice-home %}
-This guide is for retail (consumer purchased; not from the Nintendo Developer Program) consoles _only_!    
-If you have a developer ("PANDA" or "SNAKE") console, check out [devGuide](https://dev.3ds.guide).
-{% endcapture %}
-
-<div class="notice--danger">{{ notice-home | markdownify }}</div>
-
-This guide needs *your* help to [translate](https://translate.3ds.guide/) it to other languages!
-{: .notice--success}
-
-This guide needs *your* help to seed [these](https://3ds.guide/rss.xml) torrents!
+This guide needs *your* help to seed [these]({{ site.baseurl }}/rss.xml) torrents!
 {: .notice--success}
 
 Read all of the introductory pages before proceeding.

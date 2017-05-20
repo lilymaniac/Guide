@@ -15,9 +15,9 @@ with open(rss, "w") as xml:
     xml.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
     xml.write("<rss version=\"2.0\">\n")
     xml.write("\t<channel>\n")
-    xml.write("\t\t<title>Plailect Guide Feed</title>\n")
+    xml.write("\t\t<title>lilymaniac Guide Feed</title>\n")
     xml.write("\t\t<lastBuildDate>{0}</lastBuildDate>\n".format(datetime.datetime.utcnow().strftime("%a, %d %b %Y %X +0000")))
-    xml.write("\t\t<link>https://github.com/Plailect/Guide/</link>\n")
+    xml.write("\t\t<link>https://github.com/lilymaniac/Guide/</link>\n")
 
     for filename in os.listdir(dir):
         if filename.endswith(".torrent"):

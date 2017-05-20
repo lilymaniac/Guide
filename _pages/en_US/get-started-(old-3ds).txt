@@ -36,7 +36,7 @@ Your device version can be found at the bottom right of the top screen of the Sy
 Note that the new [Installing boot9strap (Hardmod)](installing-boot9strap-(hardmod)) method works on *all devices, regions, and versions*! This includes CHN and TWN region devices that were previously unhackable!
 {: .notice--success}
 
-![]({{ base_path }}/images/screenshots/system-version.png)
+![]({{ site.baseurl }}/images/screenshots/system-version.png)
 {: .notice--info}
 
 <table>

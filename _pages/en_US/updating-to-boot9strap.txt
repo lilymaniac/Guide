@@ -53,7 +53,7 @@ Note that the the following required file named `aeskeydb.bin` is *not* the same
 1. **"3DSafe" Users Only:** Copy `aeskeydb.bin` to the `/boot9strap/` folder on your SD card
   + **Note that this file will also fix the error "OTP Crypto Fail" for anyone who encounters it (with or without "3DSafe" installed), such as users with a Luma3DS PIN enabled**
 
-    ![]({{ base_path }}/images/screenshots/updating-to-b9s-file-layout.png)
+    ![]({{ site.baseurl }}/images/screenshots/updating-to-b9s-file-layout.png)
     {: .notice--info}
 
 1. Reinsert your SD card into your device
