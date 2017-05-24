@@ -1,0 +1,50 @@
+---
+title: "사이트맵" #
+layout: single-no-ads
+sitemap: false
+---
+
+{% capture notice-1 %}
+**자주 방문하는 페이지**
+
++ [설치 마무리](finalizing-setup)
++ [홈브류 런처 (사운드핵스)](homebrew-launcher-(soundhax))
++ [boot9strap 설치 (홈브류 런처)](installing-boot9strap-(homebrew-launcher))
+{% endcapture %}
+<div class="notice--info">{{ notice-1 | markdownify }}</div>
+
+{% capture notice-2 %}
+**모든 페이지**
+
++ [9.2.0 CTRTransfer](9.2.0-ctrtransfer)
++ [게임 팩을 통한 업데이트](cart-update)
++ [기여자](credits)
++ [기부](donations)
++ [F3 (Linux)](f3-(linux))
++ [F3X (Mac)](f3x-(mac))
++ [자주 묻는 질문](faq)
++ [파일 확장명 (Windows)](file-extensions-(windows))
++ [설치 마무리](finalizing-setup)
++ [시작하기 (뉴 3DS)](get-started-(new-3ds))
++ [시작하기 (구 3DS)](get-started-(old-3ds))
++ [시작하기](get-started)
++ [H2testw (Windows)](h2testw-(windows))
++ [홈](/)
++ [홈브류 런처 (사운드핵스)](homebrew-launcher-(soundhax))
++ [홈브류 런처 (기타)](homebrew-launcher-(alternatives))
++ [boot9strap 설치 (브라우저)](installing-boot9strap-(browser))
++ [boot9strap 설치 (DSiWare 게임 주입 목록)](installing-boot9strap-(dsiware-game-injection-list))
++ [boot9strap 설치 (DSiWare 게임 주입)](installing-boot9strap-(dsiware-game-injection))
++ [boot9strap 설치 (DSiWare 세이브 주입)](installing-boot9strap-(dsiware-save-injection))
++ [boot9strap 설치 (DSiWare)](installing-boot9strap-(dsiware))
++ [boot9strap 설치 (하드모드)](installing-boot9strap-(hardmod))
++ [boot9strap 설치 (홈브류 런처)](installing-boot9strap-(homebrew-launcher))
++ [boot9strap 설치 (MSET)](installing-boot9strap-(mset))
++ [EmuNAND에서 데이터 이사](move-emunand)
++ [NTR 및 Cubic Ninja](ntr-and-cubic-ninja)
++ [지역 변경](region-changing)
++ [문제 해결](troubleshooting)
++ [boot9strap으로 업데이트](updating-to-boot9strap)
++ [왜 광고가 있나요?](why-ads)
+{% endcapture %}
+<div class="notice--primary">{{ notice-2 | markdownify }}</div>

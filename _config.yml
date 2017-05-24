@@ -137,6 +137,7 @@ exclude: [
   README,
   tmp,
   # _pages/en_US,
+  # _pages/ko_KR,
 ]
 
 keep_files:
@@ -241,7 +242,18 @@ defaults:
       permalink: /:basename:output_ext
       lang: en
   - scope:
+      path: "_pages/ko_KR"
+      type: pages
+    values:
+      permalink: /ko_KR/:basename:output_ext
+      lang: ko
+  - scope:
       path: "_pages/en_US/home.txt"
       type: pages
     values:
       permalink: /index:output_ext
+  - scope:
+      path: "_pages/ko_KR/home.txt"
+      type: pages
+    values:
+      permalink: /ko_KR/index:output_ext

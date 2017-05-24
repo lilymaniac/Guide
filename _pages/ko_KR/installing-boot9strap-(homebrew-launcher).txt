@@ -1,0 +1,59 @@
+---
+title: "boot9strap 설치 (홈브류 런처)"
+---
+
+이미 EmuNAND 기반 커스텀 펌웨어가 적용된 기기를 가지고 있는 경우, 이 가이드는 SysNAND를 기준으로 작성되었으므로 모든 지시 사항을 SysNAND에 적용해야 합니다. EmuNAND와 RedNAND라는 용어는 [동일한 개념](http://3dbrew.org/wiki/NAND_Redirection)을 다른 방식으로 구현한 것이라는 점을 참고하십시오.
+{: .notice--info}
+
+이 페이지의 [자석 주소](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하기 위해서는 [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+{: .notice--success}
+
+#### 준비물
+
+* 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 최신 버전의 [safehax](https://github.com/TiniVi/safehax/releases/latest)
+* 최신 버전의 [udsploit](https://github.com/smealum/udsploit/releases/latest)
+
+#### 지시 사항
+
+##### 섹션 I - 준비 작업
+
+1. 홈브류 런처를 열어둔 채 기기에서 SD 카드를 빼내어 컴퓨터에 삽입하십시오.
+1. SD 카드의 최상위 경로에 `boot9strap` 폴더를 만드십시오.
+1. boot9strap `.zip` 파일에서 `boot9strap.firm` 파일과 `boot9strap.firm.sha` 파일을 SD 카드의 `/boot9strap/` 폴더에 복사하십시오.
+1. `safehax.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사하십시오.
+1. `udsploit.3dsx` 파일을 SD 카드의 `/3ds/` 폴더에 복사하십시오.
+1. SafeB9SInstaller `.zip` 파일에서 `SafeB9SInstaller.bin` 파일을 SD 카드의 최상위 경로에 복사하고 파일의 이름을 `safehaxpayload.bin`으로 바꾸십시오.
+
+    ![]({{ site.baseurl }}/images/screenshots/boot9strap-hb-file-layout.png)
+    {: .notice--info}
+
+1. SD 카드를 다시 기기에 삽입하십시오.
+
+##### 섹션 II -SafeB9SInstaller 실행
+
+1. 홈브류 목록에서 udsploit을 실행하십시오.
+  + 이 옵션은 밑으로 내려야 보일 수도 있습니다.
+1. 과정이 끝나면 (Start) 버튼을 눌러 udsploit을 종료하십시오.
+  + 여러 번 시도해야 할 수 있습니다.
+  + 화면이 멈춘 경우 전원 버튼을 길게 눌러 기기를 강제로 끈 다음 다시 시도하십시오.
+1. 홈브류 목록에서 safehax를 실행하십시오.
+  + 이 옵션은 밑으로 내려야 보일 수도 있습니다.
+  + "PM INIT FAILED" 오류가 발생한다면 무선 인터넷 연결이 켜져 있는 상태에서 udsploit을 실행한 것이 맞는지 확인하십시오.
+  + 그래도 *계속* "PM INIT FAILED" 오류가 발생한다면 [r19 버전의 safehax](https://github.com/TiniVi/safehax/releases/tag/r19)를 사용해 보십시오.
+  + 화면이 멈춘 경우 전원 버튼을 길게 눌러 기기를 강제로 끈 다음 다시 시도하십시오.
+1. 익스플로잇 실행에 성공하면 SafeB9SInstaller가 켜질 것입니다.
+
+##### 섹션 III - boot9strap 설치
+
+1. 안전성 검사가 끝날 때까지 기다려 주십시오.
+1. 메시지가 나타나면 주어진 키 조합을 입력하여 boot9strap을 설치하십시오.
+1. 과정이 끝나면 (A) 버튼을 눌러 기기를 다시 시작하십시오.
+1. 기기가 boot9strap을 통해 다시 켜졌다가 실행할 페이로드가 없으므로 자동으로 종료됩니다.
+  + 다음 페이지의 지시 사항을 따르기 전까지는 기기가 켜지지 않을 것입니다. 정상적인 현상이니 안심하십시오.
+
+___
+
+[설치 마무리](finalizing-setup) 페이지로 이어집니다.
+{: .notice--primary}

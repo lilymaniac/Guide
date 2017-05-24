@@ -1,0 +1,51 @@
+---
+title: "boot9strap 설치 (2xrsa)"
+---
+ 
+이 페이지의 [자석 주소](https://en.wikipedia.org/wiki/Magnet_URI_scheme) 링크를 사용하기 위해서는 [Deluge](http://dev.deluge-torrent.org/wiki/Download)와 같은 토렌트 클라이언트가 필요합니다.
+{: .notice--success}
+
+#### 준비물
+
+* 최신 버전의 [SafeB9SInstaller](https://github.com/d0k3/SafeB9SInstaller/releases/latest)
+* 최신 버전의 [boot9strap](https://github.com/SciresM/boot9strap/releases/latest)
+* 홈브류 [스타터 킷](http://smealum.github.io/ninjhax2/starter.zip)
+
+#### 지시 사항
+
+##### 섹션 I - 준비 작업
+
+1. 기기의 전원을 끄십시오.
+1. SD 카드를 컴퓨터에 삽입하십시오.
+1. `starter.zip` 파일에서 `starter` 폴더의 *내용물을* SD 카드의 최상위 경로에 복사하십시오.
+1. SD 카드의 최상위 경로에 `boot9strap` 폴더를 만드십시오.
+1. boot9strap `.zip` 파일에서 `boot9strap.firm` 파일과 `boot9strap.firm.sha` 파일을 SD 카드의 `/boot9strap/` 폴더에 복사하십시오.
+1. SafeB9SInstaller `.zip` 파일에서 `arm9.bin` 파일과 `arm11.bin` 파일을 SD 카드의 최상위 경로에 복사하십시오.
+1. SD 카드를 다시 기기에 삽입하십시오.
+1. 기기의 전원을 켜십시오.
+
+##### 섹션 II - SafeB9SInstaller 실행
+
+1. 기기에서 브라우저를 열고 다음 주소 중 하나에 접속하십시오.
+  + `http://2xrsa.3ds.guide`
+  + 2DS 또는 뉴 3DS에서 무선 인터넷 연결이 꺼져 있는 경우, 배터리와 충전기를 제거했다가 몇 초 후 다시 장착하여 무선 인터넷 연결을 켤 수 있습니다.
+  + "This service is not available in your region" 오류가 발생한다면 본체 설정에서 기기의 국가를 설치한 2.1.0 CTRTransfer 이미지의 지역과 일치하도록 바꾸십시오.
+  + CTRTransfer 전에 청소년 보호 기능을 비활성화하지 못했거나 무선 인터넷 연결 설정에 접근할 수 없는 경우, 기기는 비밀번호가 없고 이름이 `attwifi`인 네트워크에 자동으로 접속을 시도할 것입니다.
+  + 오류가 발생한다면 [이 문제 해결 가이드](troubleshooting#ts_browser)를 따라 진행하십시오.
+1. 익스플로잇 실행에 성공하면 SafeB9SInstaller가 켜질 것입니다.
+
+##### 섹션 III - boot9strap 설치
+
+1. 안전성 검사가 끝날 때까지 기다려 주십시오.
+1. 메시지가 나타나면 주어진 키 조합을 입력하여 boot9strap을 설치하십시오.
+1. 과정이 끝나면 (A) 버튼을 눌러 기기를 다시 시작하십시오.
+1. 기기가 boot9strap을 통해 다시 켜졌다가 실행할 페이로드가 없으므로 자동으로 종료됩니다.
+  + 다음 페이지의 지시 사항을 따르기 전까지는 기기가 켜지지 않을 것입니다. 정상적인 현상이니 안심하십시오.
+
+___
+
+2.1.0 버전으로 CTRTransfer한 *뉴 3DS* 사용자들은 [설치 마무리](finalizing-setup) 페이지의 "섹션 II - Luma3DS 환경 설정" 섹션을 마치고 "섹션 III - 시스템 업데이트" 섹션을 진행하기 전에 *반드시* [NAND 백업 파일을 복원](godmode9-usage#nand_restore)해야 합니다.
+{: .notice--danger}
+
+[설치 마무리](finalizing-setup) 페이지로 이어집니다.
+{: .notice--primary}
