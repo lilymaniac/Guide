@@ -33,13 +33,15 @@ title: "시작하기 (구 3DS)"
 기기의 버전은 본체 설정을 열면 위쪽 화면 우측 하단에서 확인할 수 있습니다.
 {: .notice--success}
 
-새로 추가된 [boot9strap 설치 (하드모드)](installing-boot9strap-(hardmod))는 *모든 모델, 지역 및 버전에서* 사용할 수 있습니다! 전에는 지원하지 않았던 중국판 및 대만판 모델도 포함됩니다!
-{: .notice--success}
-
 ![]({{ site.baseurl }}/images/screenshots/system-version.png)
 {: .notice--info}
 
 <table>
+  <colgroup>
+    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 40%;">
+  </colgroup>
   <thead>
     <tr>
       <th style="text-align: center">에서</th>
@@ -52,52 +54,56 @@ title: "시작하기 (구 3DS)"
     <tr>
       <td style="text-align: center; font-weight: bold;">1.0.0</td>
       <td style="text-align: center; font-weight: bold;">1.1.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">2.1.0</td>
       <td style="text-align: center; font-weight: bold;">2.1.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(2xrsa)">boot9strap 설치 (2xrsa)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;"></td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(2xrsa)">boot9strap 설치 (2xrsa)</a></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">2.2.0</td>
       <td style="text-align: center; font-weight: bold;">3.1.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">4.0.0</td>
       <td style="text-align: center; font-weight: bold;">4.5.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(mset)">boot9strap 설치 (MSET)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(browser)">boot9strap 설치 (브라우저)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(mset)">boot9strap 설치 (MSET)</a></td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(browser)">boot9strap 설치 (브라우저)</a></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">5.0.0</td>
       <td style="text-align: center; font-weight: bold;">5.1.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(browser)">boot9strap 설치 (브라우저)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;"></td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(browser)">boot9strap 설치 (브라우저)</a></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">6.0.0</td>
       <td style="text-align: center; font-weight: bold;">6.3.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(mset)">boot9strap 설치 (MSET)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(browser)">boot9strap 설치 (브라우저)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(mset)">boot9strap 설치 (MSET)</a></td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(browser)">boot9strap 설치 (브라우저)</a></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">7.0.0</td>
       <td style="text-align: center; font-weight: bold;">8.1.0</td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
-      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(browser)">boot9strap 설치 (브라우저)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;"></td>
+      <td style="text-align: center; font-weight: bold;"><a href="installing-boot9strap-(browser)">boot9strap 설치 (브라우저)</a></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">9.6.0 (KOR)<br>9.0.0 (기타)</td>
       <td style="text-align: center; font-weight: bold;">11.3.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="homebrew-launcher-(soundhax)">홈브류 런처 (사운드핵스)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="homebrew-launcher-(soundhax)">홈브류 런처 (사운드핵스)</a></td>
     </tr>
     <tr>
       <td style="text-align: center; font-weight: bold;">11.4.0</td>
       <td style="text-align: center; font-weight: bold;">11.4.0</td>
-      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="installing-boot9strap-(dsiware)">boot9strap 설치 (DSiWare)</a> 또는 <br> <a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="installing-boot9strap-(dsiware)">boot9strap 설치 (DSiWare)</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold;" colspan="2">모든 버전<br><sub>(납땜 필요!)</sub></td>
+      <td style="text-align: center; font-weight: bold;" colspan="2"><a href="installing-boot9strap-(hardmod)">boot9strap 설치 (하드모드)</a></td>
     </tr>
   </tbody>
 </table>

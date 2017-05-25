@@ -107,7 +107,7 @@ title: "설치 마무리"
 1. (지금은 FBI가 되어 있는) 안전을 위한 주의사항을 실행하십시오.
 1. `SD` -> `cias` 디렉터리로 이동하십시오.
 1. "\<current directory>" 항목을 선택하십시오.
-1. "Install all CIAs" 옵션을 선택하고 (A) 버튼을 눌러 진행하십시오.
+1. "Install and delete all CIAs" 옵션을 선택하고 (A) 버튼을 눌러 진행하십시오.
 1. 홈 버튼을 눌러 FBI를 종료하십시오.
 
 ##### 섹션 VI - DSP 덤프
